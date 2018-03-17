@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="BookCreationWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-product-creation">
+                <p class="title">添加书籍</p>
+                <div class="form">
+                <span class="tit">名 称 : <input class="name" type='text' style="width:60%;border-radius:5px;" t-att-value="widget.book.name"></input> <br /></span>
+                <span class="tit">ISBN : <input class="isbn" type='text' style="width:60%;border-radius:5px;" t-att-value="widget.book.isbn"></input> <br /></span>
+                    <span class="tit">作 者 :<input class="name" type='text' style="width:60%;border-radius:5px;" t-att-value="widget.book.author"></input> <br /> </span>
+                    <span class="tit">条码 : <input class="barcode" name="barcode" type='text' style="width:60%;border-radius:5px;"></input> <br /></span>
+                    <span class="tit">书 架:<select name="rack" class="rack" style="width:60%;border-radius:5px;">
+                    <t t-foreach="widget.racks" t-as="rack">
+                        <option t-att-value="rack.id" >
+                            <t t-esc="rack.name"></t>| <t t-esc="rack.code"></t>
+                        </option>
+                    </t>
+                </select><br /></span>
+                <span class="tit">副本:<input name="copy_num" class="copy_num" type='number' style="width:60%;border-radius:5px;" ></input> <br /></span>
+                <span class="tit">卷（册）：   <input name="tomes_num" type='number' class="tomes_num" style="width:60%;border-radius:5px;" ></input></span>
+                <div class="footer">
+                    <div class="button confirm">
+                        新建
+                    </div>
+                    <div class="button cancel">
+                        取消
+                    </div>
+                </div>
+            </div>
+                </div>
+        </div>
+    </t>
+
+
+    <t t-name="BookIntentWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-product-creation">
+                <p class="title"></p>
+                isbn : <t t-esc="widget.book.isbn" /><br /><br />
+                名称 :  <t t-esc="widget.book.name" /> <br /><br />
+
+                <div class="footer">
+                    <div class="button cancel">
+                        取消
+                    </div>
+                    <div class="button issue">
+                        借阅
+                    </div>
+                    <div class="button return">
+                        归还
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

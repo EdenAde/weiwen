@@ -1,0 +1,296 @@
+<openerp><data>
+
+ <record id="action_attendance_record_check_in_out" model="ir.actions.act_window">
+    <field name="name">签到签退记录</field>
+    <field name="res_model">attendance_record.check_in_out_record</field>
+ </record>
+
+ <record id="action_attendance_record_photo" model="ir.actions.act_window">
+    <field name="name">相片记录</field>
+    <field name="res_model">attendance_record.photo_record</field>
+ </record>
+  
+ <record id="action_attendance_series" model="ir.actions.act_window">
+    <field name="name">班次定义</field>
+    <field name="res_model">attendance_record.attendance_series</field>
+ </record>
+  
+ <record id="action_human_attendance_series" model="ir.actions.act_window">
+    <field name="name">人员班次</field>
+    <field name="res_model">attendance_record.human_attendance_series</field>
+ </record>  
+  
+ <record id="action_human_attendance_table" model="ir.actions.act_window">
+    <field name="name">考勤表</field>
+    <field name="res_model">attendance_record.human_attendance_table</field>
+ </record>  
+
+  
+  <record id="attendance_record_check_in_out_list" model="ir.ui.view">
+    <field name="name">打卡: 清单</field>
+    <field name="model">attendance_record.check_in_out_record</field>
+    <field name="arch" type="xml">
+      <tree string="签到签退记录">
+        <field name="create_uid"/>
+        <field name="create_date"/>     
+        <field name="name"/>
+        <field name="longitude"/>
+        <field name="latitude"/>  
+        <field name="position_address"/>
+        <field name="position_tpye"/>
+        <field name="check_in_out"/>        
+      </tree>
+    </field>
+  </record>  
+
+  <record id="attendance_record_photo_record_list" model="ir.ui.view">
+    <field name="name">拍照: 清单</field>
+    <field name="model">attendance_record.photo_record</field>
+    <field name="arch" type="xml">
+      <tree string="拍照记录">
+        <field name="create_uid"/>
+        <field name="create_date"/>  
+        <field name="name"/>
+        <field name="longitude"/>
+        <field name="latitude"/>  
+        <field name="position_address"/>
+        <field name="position_tpye"/>
+        <field name="photo_updated"/>        
+      </tree>
+    </field>
+  </record>  
+
+  <record id="attendance_record_check_in_out_form" model="ir.ui.view">
+    <field name="name">打卡: 详细视图</field>
+    <field name="model">attendance_record.check_in_out_record</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+         <div class="oe_title">
+             <h1>
+                 <field name="check_in_out" class="oe_inline" />
+             </h1>
+         </div>
+         <group>
+           <group>
+	          <field name="create_uid"/>
+	          <field name="create_date"/>
+	          <field name="name"/>      
+	          <field name="position_address"/>      
+           </group>
+           <group>
+	          <field name="longitude"/>
+	          <field name="latitude"/>
+	          <field name="position_tpye"/>         
+           </group>         
+         </group>
+          <div style="width: 800px;">
+ 			 <widget type="map" options="{'longitude': 'longitude', 'latitude': 'latitude'}"/>
+  		  </div>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="attendance_record_photo_record_form" model="ir.ui.view">
+    <field name="name">拍照: 详细视图</field>
+    <field name="model">attendance_record.photo_record</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+         <group>
+           <group>
+	          <field name="create_uid"/>
+	          <field name="create_date"/>
+	          <field name="name"/>      
+	          <field name="position_address"/>      
+           </group>
+           <group>
+	          <field name="longitude"/>
+	          <field name="latitude"/>
+	          <field name="position_tpye"/>         
+           </group>         
+         </group>
+          <div style="width: 800px;">
+ 			 <field name="photo_updated" widget="image" width="100%" /> 
+  		  </div>
+          <div style="width: 800px;">
+ 			 <widget type="map" options="{'longitude': 'longitude', 'latitude': 'latitude'}"/>
+  		  </div>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  
+  <record id="view_attendance_record_attendance_series_form" model="ir.ui.view">
+    <field name="name">attendance_record.attendance_series.form</field>
+    <field name="model">attendance_record.attendance_series</field>
+    <field name="arch" type="xml">
+        <form string="班次定义">
+            <sheet>
+                <group>
+                    <field name="name"/>
+                </group>
+                    <field name="item_ids"/>
+            </sheet>
+        </form>
+    </field>
+</record>
+  
+  <record id="view_attendance_record_attendance_series_item_tree" model="ir.ui.view">
+      <field name="name">attendance_record.attendance_series_item.tree</field>
+      <field name="model">attendance_record.attendance_series_item</field>
+      <field name="arch" type="xml">
+          <tree string="班次定义明细" editable="top">
+              <field name="name"/>
+              <field name="displayorder"/>
+              <field name="min_before_from"/>
+              <field name="hour_from" widget="float_time"/>
+              <field name="min_after_from"/>
+              <field name="hour_to" widget="float_time"/>
+              <field name="min_after_to"/>
+              <field name="calc_overtime"/>
+          </tree>
+      </field>
+  </record>
+
+  <record id="attendance_record_human_attendance_series_list" model="ir.ui.view">
+    <field name="name">attendance_record.human_attendance_series.tree</field>
+    <field name="model">attendance_record.human_attendance_series</field>
+    <field name="arch" type="xml">
+      <tree string="人员班次">
+        <field name="human"/>
+        <field name="displayorder"/>     
+        <field name="attendance_series_id"/>      
+      </tree>
+    </field>
+  </record>   
+  
+  <record id="attendance_record_human_attendance_table_list" model="ir.ui.view">
+    <field name="name">attendance_record.human_attendance_table.tree</field>
+    <field name="model">attendance_record.human_attendance_table</field>
+    <field name="arch" type="xml">
+      <tree string="考勤表">
+        <field name="name"/>
+        <field name="start_date"/>     
+        <field name="end_date"/>      
+      </tree>
+    </field>
+  </record>  
+  
+  <record id="attendance_record_human_attendance_table_form" model="ir.ui.view">
+    <field name="name">attendance_record.human_attendance_table.form</field>
+    <field name="model">attendance_record.human_attendance_table</field>
+    <field name="arch" type="xml">
+        <form string="考勤表">
+            <sheet>
+                <group>
+                  <group>
+                  	<field name="name"/>
+                		<field name="start_date"/>
+                		<field name="end_date"/>
+                	</group>
+                	<group>
+                	  
+                		<button name="action_generate_attendance_detail" type="object" string="计算明细"/>
+                	</group>
+                </group>                 
+                <field name="item_ids"/>
+            </sheet>
+        </form>
+    </field>
+  </record>  
+  
+  <record id="hat_item_list" model="ir.ui.view">
+    <field name="name">attendance_record.hat_item.tree</field>
+    <field name="model">attendance_record.hat_item</field>
+    <field name="arch" type="xml">
+      <tree string="考勤表明细">
+        <field name="human"/>
+        <field name="attendance_date"/>     
+        <field name="attendance_series_item_name"/>   
+        <field name="checkintime"/>
+        <field name="checkouttime"/>   
+        <field name="attendance_result"/>     
+        <field name="overtime_hours"/>   
+        <field name="work_hours"/>     
+        <field name="week_day"/>   
+        <field name="displayorder"/>    
+        <field name="attendance_table_id"/>         
+      </tree>
+    </field>
+  </record>  
+
+
+    <record id="hat_item_search" model="ir.ui.view">
+      <field name="name">attendance_record.hat_item.view.search</field>
+      <field name="model">attendance_record.hat_item</field>
+      <field name="arch" type="xml">
+        <search string="考勤表明细查询">
+        
+          <field name="attendance_table_id" />
+          <field name="human" />
+          <field name="attendance_result" />
+        
+          <filter string="非正常" name="notok" domain="[('attendance_result','in',('latein','earlyout','lateinearlyout','absent','semiabsent'))]"/>
+          <filter string="工作日" name="workday" domain="[('week_day','&lt;',6)]"/>
+          
+          <group expand="1" string="分组">
+	          <filter string="考勤表" context="{'group_by':'attendance_table_id'}" />  
+              <filter string="班次明细名称" context="{'group_by':'attendance_series_item_name'}" />  	          
+	          <filter string="人员" icon="tterp-partner" context="{'group_by':'human'}" /> 
+	          <filter string="考勤结果" icon="terp-stock_effects-object-colorize" context="{'group_by':'attendance_result'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="hat_item_graph">
+      <field name="name">attendance_record.hat_item.graph</field>
+      <field name="model">attendance_record.hat_item</field>
+      <field name="arch" type="xml">
+        <graph string="考勤表明细" type="pivot">
+          <field name="attendance_table_id" type="row" />
+          <field name="human" type="row" />
+          <field name="attendance_result" type="row" />
+          <field name="attendance_series_item_name" type="col" />
+        </graph>
+      </field>
+    </record>
+
+    <record id="hat_item_action" model="ir.actions.act_window">
+      <field name="name">考勤明细汇总</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">attendance_record.hat_item</field>
+      <field name="search_view_id" ref="hat_item_search" />
+      <field name="view_type">form</field>
+      <field name="view_mode">graph,tree,form</field>
+      <field name="view_id" ref="hat_item_graph" />
+    </record>  
+  
+  <menuitem sequence="0" id="menu_attendance_record" name="手机打卡"/>
+  <menuitem id="menu_attendance_record_functions" parent="menu_attendance_record"
+            name="打卡记录"/>
+  <menuitem sequence="0" id="menu_attendance_record_check_in_out"
+            parent="menu_attendance_record_functions"
+            action="action_attendance_record_check_in_out"/>
+  <menuitem sequence="0" id="menu_attendance_record_photo"
+            parent="menu_attendance_record_functions"
+            action="action_attendance_record_photo"/>
+  <menuitem id="menu_attendance_calc_functions" parent="menu_attendance_record"
+            name="考勤记录"/>
+  <menuitem sequence="0" id="menu_attendance_series"
+            parent="menu_attendance_calc_functions"
+            action="action_attendance_series"/>   
+  <menuitem sequence="0" id="menu_human_attendance_series"
+            parent="menu_attendance_calc_functions"
+            action="action_human_attendance_series"/>    
+  <menuitem sequence="0" id="menu_human_attendance_table"
+            parent="menu_attendance_calc_functions"
+            action="action_human_attendance_table"/>  
+  <menuitem name="考勤明细汇总" id="menu_sale_order_margin_form" 
+			action="hat_item_action"
+			parent="menu_attendance_calc_functions" />
+     
+</data></openerp>

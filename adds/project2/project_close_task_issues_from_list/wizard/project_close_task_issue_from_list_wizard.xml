@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- TASKS -->
+        <record id="project_task_batch_close" model="ir.ui.view">
+            <field name="name">Close tasks by batch</field>
+            <field name="model">project.close.task.issue</field>
+            <field name="arch" type="xml">
+                <form string="Close tasks by batch">
+                    <separator colspan="4" string="Do you really want to close these tasks?" />
+                    <footer>
+                        <button name="batch_close_tasks" string="Yes" type="object" class="oe_highlight"/>
+                        or
+                        <button string="No" class="oe_link" special="cancel" />
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+        <record id="action_close_project_task" model="ir.actions.act_window">
+            <field name="name">Close task(s)</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">project.close.task.issue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="project_task_batch_close"/>
+            <field name="target">new</field>
+            <field name="multi">True</field>
+        </record>
+
+        <record model="ir.values" id="project_task_batch_close">
+            <field name="model_id" ref="project_service_desk.model_project_task" />
+            <field name="name">Close task(s)</field>
+            <field name="key2">client_action_multi</field>
+            <field name="value" eval="'ir.actions.act_window,' + str(ref('action_close_project_task'))" />
+            <field name="key">action</field>
+            <field name="model">project.task</field>
+        </record>
+
+        <!-- ISSUES -->
+        <record id="project_issue_batch_close" model="ir.ui.view">
+            <field name="name">Close issues by batch</field>
+            <field name="model">project.close.task.issue</field>
+            <field name="arch" type="xml">
+                <form string="Close issues by batch">
+                    <separator colspan="4" string="Do you really want to close these issues?" />
+                    <footer>
+                        <button name="batch_close_issues" string="Yes" type="object" class="oe_highlight"/>
+                        or
+                        <button string="No" class="oe_link" special="cancel" />
+                    </footer>
+               </form>
+            </field>
+        </record>
+
+        <record id="action_close_project_issue" model="ir.actions.act_window">
+            <field name="name">Close issues(s)</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">project.close.task.issue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="project_issue_batch_close"/>
+            <field name="target">new</field>
+            <field name="multi">True</field>
+        </record>
+
+        <record model="ir.values" id="project_issues_batch_close">
+            <field name="model_id" ref="project_service_desk.model_project_issue" />
+            <field name="name">Close issue(s)</field>
+            <field name="key2">client_action_multi</field>
+            <field name="value" eval="'ir.actions.act_window,' + str(ref('action_close_project_issue'))" />
+            <field name="key">action</field>
+            <field name="model">project.issue</field>
+        </record>
+
+    </data>
+</openerp>

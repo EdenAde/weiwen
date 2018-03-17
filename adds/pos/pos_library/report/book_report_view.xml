@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <record id="view_books_graph" model="ir.ui.view">
+         <field name="name">book.report.graph</field>
+         <field name="model">book.report</field>
+         <field name="arch" type="xml">
+             <graph string="书籍分析" type="pivot" stacked="True">
+                 <field name="school_id" type="col"/>
+                 <field name="date" interval="month" type="row"/>
+                 <field name="book_all" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+
+    <record id="view_books_graph_2" model="ir.ui.view">
+         <field name="name">book.report.graph</field>
+         <field name="model">book.report</field>
+         <field name="arch" type="xml">
+             <graph string="书籍分析" type="pivot" stacked="True">
+                 <field name="cncateg" type="col"/>
+                 <field name="book_all" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+
+
+
+    <record id="filter_books_report_schools" model="ir.filters">
+        <field name="name">按学校</field>
+        <field name="model_id">book.report</field>
+        <field name="user_id" eval="False"/>
+        <field name="context">{'group_by': ['date:year', 'school_id']}</field>
+    </record>
+
+    <record id="view_books_search" model="ir.ui.view">
+        <field name="name">book.report.search</field>
+        <field name="model">book.report</field>
+        <field name="arch" type="xml">
+            <search string="书籍分析">
+                <field name="date"/>
+
+                <filter string="今年" name="year"  domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+                <filter string="今天" name="day"  domain="[('date','&gt;=',(context_today() - datetime.timedelta(1)).strftime('%%Y-%%m-%%d'))]"/>
+                <group expand="1" string="分组">
+                    <filter string="学校" name="学校" context="{'group_by':'school_id'}"/>
+
+                    <separator/>
+                    <filter string="月份" context="{'group_by':'date:month'}" help="Ordered date of the sales order"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+
+    <record id="view_books_search_school" model="ir.ui.view">
+        <field name="name">book.report.search</field>
+        <field name="model">book.report</field>
+        <field name="arch" type="xml">
+            <search string="书籍分析">
+                <field name="date"/>
+
+                <filter string="今年" name="year"  domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+                <filter string="今天" name="day"  domain="[('date','&gt;=',(context_today() - datetime.timedelta(1)).strftime('%%Y-%%m-%%d'))]"/>
+                <group expand="1" string="分组">
+                    <filter string="月份" context="{'group_by':'date:month'}" help="Ordered date of the sales order"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+        <record id="view_library_book_tree" model="ir.ui.view">
+            <field name="name">library.book.report.issue.tree</field>
+            <field name="model">library.report</field>
+            <field name="arch" type="xml">
+                <tree string="Books Issue">
+                    <field name="book_id" />
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+
+       <record id="view_library_book_tree_2" model="ir.ui.view">
+            <field name="name">library.book.report.issue.tree</field>
+            <field name="model">library.report</field>
+            <field name="arch" type="xml">
+                <tree string="Books Issue">
+                    <field name="book_id" />
+
+                </tree>
+            </field>
+        </record>
+
+
+
+    <record id="action_books_report_all" model="ir.actions.act_window">
+        <field name="name">书籍统计</field>
+        <field name="res_model">book.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+        <field name="search_view_id" ref="view_books_search"/>
+        <field name="view_mode">pivot,graph,tree</field>
+        <field name="search_view_id" ref="view_books_search"/>
+        <field name="context">{'graph_view_ref':'pos_library.view_books_graph','tree_view_ref':'pos_library.view_library_book_tree'}
+        </field>
+    </record>
+
+
+    <record id="action_books_report_school" model="ir.actions.act_window">
+        <field name="name">书籍统计</field>
+        <field name="res_model">book.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="context">{'graph_view_ref':'pos_library.view_books_graph_2','tree_view_ref':'pos_library.view_library_book_tree_2'}
+        </field>
+    </record>
+
+    <menuitem action="action_books_report_all" id="menu_books_all" parent="base.menu_reporting_dashboard" sequence="11" groups="pos_library.group_dictation_librarian"/>
+
+
+    <menuitem action="action_books_report_school" id="menu_books_school" parent="board.menu_board_my_dash" sequence="12" groups="library.group_librarian"/>
+
+
+</data>
+</openerp>

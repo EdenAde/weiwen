@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_project_report_wizard_print" model="ir.ui.view">
+            <field name="name">view_project_report_wizard_form_print</field>
+            <field name="model">project.report.wizard</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Project Report Print">
+                    <group string="Description">
+                        <div class="oe_left">
+                            <group >
+                                <field name="project_info"/>
+                                <field name="project_times"/>
+                                <field name="show_chart"/>
+                            </group>
+                            <group>
+                                <field name="tasks"/>
+                                <field name="issues"/>
+                            </group>
+                        </div>
+                        <div class="oe_left">
+                            <group>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                                <newline/>
+                            </group>
+                            <group string="Tasks" attrs="{'invisible':[('tasks','=',False)]}">
+                                <field name="tasks_type"/>
+                                <field name="tasks_order"/>
+                                <field name="tasks_stage"/>
+                            </group>
+                            <group string="Issues" attrs="{'invisible':[('issues','=',False)]}">
+                                <field name="issues_type"/>
+                                <field name="issues_order"/>
+                                <field name="issues_stage"/>
+                            </group>
+                        </div>
+                        <div class="oe_left">
+                            <group >
+                                <field name="date_application_creation"/>
+                                <field name="date_application_modified"/>
+                                <field name="date_application_closed"/>
+                            </group>
+                        </div>
+                    </group>
+                    <field name="comments" placeholder="Comments to add at the end the report ..."/>
+                    <div style="text-align:right">
+                        <button icon="gtk-cancel" special="cancel" string="Cancel"/>
+                        <button name="action_print_report" string="Print" type="object" /> 
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

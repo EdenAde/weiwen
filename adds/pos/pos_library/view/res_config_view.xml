@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_library_config_settings_form" model="ir.ui.view">
+            <field name="name">library.config.settings.form</field>
+            <field name="model">library.config.settings</field>
+             <field name="inherit_id" eval="False"/>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <header>
+                        <button string="设置" type="object" name="execute" class="oe_highlight"/>
+                        <button string="取消" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <group string="参数设置">
+                        <label for="div" string="默认允许借出天数"/>
+                        <div>
+                            <div>
+                                <field name="day_to_return" class="oe_inline"/>
+
+                            </div>
+                        </div>
+
+
+                        <label for="div" string="默认允许借出本数"/>
+                        <div>
+                            <div>
+                                <field name="book_limit" class="oe_inline"/>
+
+                            </div>
+                        </div>
+
+
+                    </group>
+
+                </form>
+            </field>
+        </record>
+        <record id="action_library_configuration" model="ir.actions.act_window">
+            <field name="name">Configure library</field>
+            <field name="res_model">library.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+
+
+
+       <record id="readertype_form" model="ir.ui.view">
+            <field name="name">Reader typ</field>
+            <field name="model">card.type</field>
+            <field name="arch" type="xml">
+                <form string="cardtypes">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                             <field name="book_limit"/>
+                             <field name="day_limit"/>
+                             <field name="book_day_rent"/>
+                            <field name="overdur_rent"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View Of Library Rack -->
+
+        <record id="cardtype_tree" model="ir.ui.view">
+            <field name="name">读者类型</field>
+            <field name="model">card.type</field>
+            <field name="arch" type="xml">
+                <tree string="cardtype">
+                    <field name="name"></field>
+                    <field name="book_limit"/>
+                    <field name="day_limit"/>
+                    <field name="book_day_rent"/>
+                    <field name="overdur_rent"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View Of Library Rack -->
+
+        <!-- Actions Of Form & Tree Views Of Library Rack -->
+
+        <record id="action_reader_type" model="ir.actions.act_window">
+            <field name="name">读者类型</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">card.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_school_reader_type" name="读者类型" parent="library.menu_library_config"
+                  action="action_reader_type"
+                  groups="library.group_librarian"/>
+
+
+</odoo>

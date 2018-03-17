@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_statictics_manager,library.summary,model_library_summary,library.group_librarian,1,1,1,1
+access_book_report_manager,book.report,model_book_report,library.group_librarian,1,1,1,1
+access_library_report_manager,library.report,model_library_report,library.group_librarian,1,1,1,1
+access_library_card_type_manager,card.type,model_card_type,library.group_librarian,1,1,1,1
+access_school_school_division_manager,school.school.division,model_school_school_division,library.group_librarian,1,0,0,0
+access_hr_res_users,res.users,model_res_users,school.group_school_administration,1,1,1,1
+access_hr_job,hr.job,hr.model_hr_job,school.group_school_administration,1,1,1,1
+access_res_groups,res.groups,mail.model_res_groups,school.group_school_administration,1,1,1,1
+access_ir_module_category,ir.module.category,base.model_ir_module_category,school.group_school_administration,1,1,1,1
+access_ir_ui_view,ir.ui.view,base.model_ir_ui_view,school.group_school_administration,1,1,1,1
+access_ir_model_fields,ir.model.fields,base.model_ir_model_fields,library.group_librarian,1,0,0,0
+access_model_update_fields,model.update.fields,model_model_update_fields,library.group_librarian,1,1,1,1
+access_model_update_fields_student,model.update.fields.student,model_model_update_fields_student,library.group_librarian,1,1,1,1
+access_model_update_fields_teacher,model.update.fields.teacher,model_model_update_fields_teacher,library.group_librarian,1,1,1,1

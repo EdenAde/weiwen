@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+   <data>
+      <template id="assets_backend" name="widget_amaps assets" inherit_id="web.assets_backend">
+         <xpath expr="." position="inside">
+
+                <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script src="http://webapi.amap.com/maps?v=1.3&amp;key=f8e7a0366091e70c85cdde5442caa30e"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+
+            <link rel="stylesheet" href="/widget_amaps/static/src/css/widget_amaps.css" />
+            <script type="text/javascript" src="/widget_amaps/static/src/js/widget_amaps.js"></script>
+         </xpath>
+      </template>
+   </data>
+</openerp>

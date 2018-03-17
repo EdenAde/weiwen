@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+<script src="/mobile_sample/static/src/js/jquery.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="/mobile_sample/static/src/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="/mobile_sample/static/src/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="/mobile_sample/static/src/js/bootstrap.min.js" ></script>
+<script src="/mobile_sample/static/src/js/bootstrap-table.js"></script>
+    <link rel="stylesheet" href="/mobile_sample/static/src/css/bootstrap-table.css">
+
+
+    <script type="text/javascript" src="/mobile_sample/static/src/js/echarts/echarts-all-3.js"></script>
+       <script type="text/javascript" src="/mobile_sample/static/src/js/echarts/dataTool.min.js"></script>
+       <script type="text/javascript" src="/mobile_sample/static/src/js/echarts/china.js"></script>
+       <script type="text/javascript" src="/mobile_sample/static/src/js/echarts/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="/mobile_sample/static/src/js/echarts/bmap.min.js"></script>
+<script src="//cdn.bootcss.com/lodash.js/4.17.4/lodash.js"></script>
+
+    <style>
+    body{
+       /*// height: 100%;*/
+    background-image:url({% if school.image %}'data:image/png;base64,{{school.image}}'{% else %}  '/mobile_sample/static/src/img/msz.jpg'{% endif %});
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    /*-moz-background-size: 100% 100%; *//*  Firefox 3.6 */
+    /*-o-background-size: 100% 100%;*//* Opera 9.5 */
+    /*-webkit-background-size: 100% 100%;*//* Safari 3.0 */
+    /*background-size: 100% 100%;*//*  Firefox 4.0 and other CSS3-compliant browsers */
+    /*-moz-border-image: url(/mobile_sample/static/src/img/msz.jpg) 0; *//* Firefox 3.5 */
+    /*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/mobile_sample/static/src/img/msz.jpg', sizingMethod='scale');*//* for < ie9 */
+
+    }
+.sta{
+    background: rgba(198, 210, 250, 0.78);
+    padding: 0px 20px 20px;
+}
+
+.header{
+        position: relative;
+    text-align: center;
+    background-color: #27AE60;
+    color: #fff;
+    margin-bottom: 0;
+
+}
+
+/*.bs-table:after {*/
+    /*content: "Example";*/
+    /*position: absolute;*/
+    /*top: 15px;*/
+    /*left: 15px;*/
+    /*font-size: 12px;*/
+    /*font-weight: bold;*/
+    /*color: #bbb;*/
+    /*text-transform: uppercase;*/
+    /*letter-spacing: 1px;*/
+/*}*/
+    .highlight{
+        position: relative;
+        bottom: 0px;
+    }
+
+        .rotate{
+
+            -webkit-transform: rotateZ(180deg);
+            -moz-transform: rotateZ(180deg);
+            -o-transform: rotateZ(180deg);
+            -ms-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+
+        }
+        .t-2{
+            display: none;
+        }
+        .t-3{
+            display: none;
+        }
+</style>
+</head>
+<body >
+<div class="header pjumbotron">
+  <h1>{{school.com_name}} <small></small></h1>
+</div>
+
+
+<div class="row" style="margin-top: 10%;margin-bottom: 10%">
+  <div class="col-md-5 sta">
+
+
+
+    <div class="bs-table">
+        <figure class="highlight">
+    <h3>今日书籍借阅统计 <span class="label label-success">小学</span></h3>
+
+
+    <table id="table" data-height="220">
+
+    </table>
+       </figure>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+     <div class="col-md-2"></div>
+  <div class="col-md-5 sta" >
+      <div id="chart"   style="width: 100%;height: 600px;"></div>
+  </div>
+
+
+    <footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand rotate" href="/statistics">
+      <span class="glyphicon glyphicon-share-alt" aria-hidden="true" style="font-size: 33px"></span>
+      </a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+
+
+
+function sort_by_school(dataArray){
+
+        var newArray = _.sortBy(dataArray, ['school_sort']);
+        return newArray;
+
+    }
+
+
+$(function() {
+
+
+
+var dom = document.getElementById("chart");
+var myChart = echarts.init(dom);
+var app = {};
+
+
+option = {
+    tooltip: {
+        trigger: 'axis'
+    },
+
+    legend: {
+        data:['借阅率']
+    },
+    xAxis: [
+        {
+            type: 'category',
+            data: [],
+            axisLabel: {
+                interval: 0,
+                rotate: 30
+            }
+        }
+    ],
+    yAxis: [
+
+        {
+            type: 'value',
+            name: '',
+//            min: 0,
+//            max: 100,
+//            interval: 30,
+//            axisLabel: {
+//                formatter: '{value} %'
+//            }
+        },
+        {
+            type: 'value',
+            name: '数量',
+          //  min: 0,
+            //max: 1000,
+            //interval: 30,
+            axisLabel: {
+                formatter: '{value} 本'
+            }
+        }
+    ],
+    series: [
+
+
+        {
+            name:'',
+            type:'line',
+            yAxisIndex: 1,
+            data:[]
+        }
+        ,
+         {
+            name:'数量',
+            type:'bar',
+            yAxisIndex: 1,
+            data:[]
+        }
+
+    ]
+};
+
+myChart.setOption(option)
+
+
+
+
+
+
+
+//           <th data-field="name">学校</th>
+//        <th data-field="book_amount">藏书量</th>
+//        <th data-field="student_count">学生总数</th>
+//        <th data-field="book_average">生均册书</th>
+//        <th data-field="issue_rate">图书借阅率</th>
+//        <th data-field="today_issue">今日借阅</th>
+
+
+    $.get("http://114.215.82.219:8081/api/library/statistics/class/{{ class.id }}").done(function (data) {
+         var dataArray=eval("("+data+")");
+
+         $('#table').bootstrapTable({
+             data: dataArray.table,
+             striped: true,
+             title:"123123",
+             sortable:true,
+             columns: [{
+        field: 'stu_name',
+        title: '学生'
+    }, {
+        field: 'book_name',
+        title: '书籍'
+    },{
+        field: 'st_name',
+                 sortable:true,
+        title: '班级'
+    }, {
+        field: 'issue_state',
+                 sortable:true,
+        title: '操作'
+    }, {
+        field: 'date_issue',
+                 sortable:true,
+        title: '借阅日期'
+    }, {
+        field: 'date_return',
+                 sortable:true,
+        title: '归还日期'
+    },
+
+             ]
+
+         });
+
+
+
+
+        option.xAxis[0].data=dataArray.r_xs
+        option.series[1].data=dataArray.r_issues
+         myChart.setOption(option,true);
+
+
+        // console.log("dataArraySort");
+        // console.log(data1);
+     });
+
+
+})
+
+</script>
+</body>
+</html>

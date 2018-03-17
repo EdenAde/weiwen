@@ -1,0 +1,228 @@
+<include file="Public/zbhead"/>
+
+<body id="news">
+
+<div id="ui-header">
+	<div class="fixed" style="text-align:center">
+		<a id="" >禧菲尔钻石</a>
+	</div>
+</div>
+
+<div class="Listpage">
+<div class="top46"></div>
+<div class="page-bizinfo">
+
+<!-- 图片 begin 
+<!-- 图片 end -->
+<div class="foucs">
+     <div class="foucsBox" style="display:none">
+       <div id="mySwipe" class="swipe" style="visibility: none;">
+          <div class="swipe-wrap" style="width: 3105px;">
+          	
+
+                   <div data-index="0" style="width: 100%; left: 0px; transition: 300ms; -webkit-transition: 300ms; -webkit-transform: translate(-621px, 0px) translateZ(0px);">
+               
+               
+                    <div><b><img src="./Public/Home/images/z1.png"></b></div>
+               
+                    </div>
+                  <div data-index="1" style="width: 100%;  left: 0px; transition: 300ms; -webkit-transition: 300ms; -webkit-transform: translate(-621px, 0px) translateZ(0px);">
+               
+               
+                    <div><b><img src="./Public/Home/images/z2.png"></b></div>
+               
+                    </div>
+
+
+
+				
+
+          </div>
+       </div>
+       <ul id="position">
+			<li class="on"></li>
+			<li class=""></li>
+			
+      </ul>
+      <script>
+		var elem = document.getElementById('mySwipe');
+		window.mySwipe = Swipe(elem, {
+		   startSlide: 0,
+		   auto: 3000,
+		   continuous: true,
+		   disableScroll: true,
+		   stopPropagation: true,
+		   callback: function(pos) { 
+			  var i = bullets.length;
+			  while (i--) {
+				bullets[i].className = ' ';
+			  }
+			  bullets[pos].className = 'on';
+		
+			}
+		  });
+		var bullets = document.getElementById('position').getElementsByTagName('li');
+	  </script>
+     </div>
+   </div>
+</div>	
+
+<!-- 产品字段信息 begin -->
+<div class="list">
+
+<!-- 声音begin -->
+
+<!-- 声音begin -->
+
+<div id="oldlist">
+<ul>
+
+	
+
+       
+          <li class="newsmore">
+         	<div class="olditem">
+         		<div class="title">
+         		产品名称：
+         		
+	       	
+	       	  {$info.product_name}
+	       	
+         		</div>
+         	</div>
+         </li>
+
+
+          
+       
+ <li class="newsmore">
+          <div class="olditem">
+            <div class="title">
+            款号：
+              {$info.name}
+          
+            </div>
+          </div>
+         </li>
+
+         <li class="newsmore">
+         	<div class="olditem">
+         		<div class="title">
+         		总重(g)：
+         		
+	       	
+	       	  	{$info.weight}
+	       	
+         		</div>
+         	</div>
+         </li>
+
+         <li class="newsmore">
+          <div class="olditem">
+            <div class="title">
+            手寸：
+            
+          
+            {$info.hand}
+          
+            </div>
+          </div>
+         </li>
+       
+         <li class="newsmore">
+         	<div class="olditem">
+         		<div class="title">
+         		净度：
+	       	  	{$info.website_meta_title}
+	       	
+         		</div>
+         	</div>
+         </li>
+       
+
+         <li class="newsmore">
+         	<div class="olditem">
+         		<div class="title">
+         		石重(ct)：
+	       	  	{$info.store_weight}
+	       	
+         		</div>
+         	</div>
+         </li>
+
+           <li class="newsmore">
+          <div class="olditem">
+            <div class="title">
+            副石(ct)：
+              {$info.side_store_weight}
+          
+            </div>
+          </div>
+         </li>
+       
+
+         <li class="newsmore">
+         	<div class="olditem">
+         		<div class="title">
+         		价格：
+	       	  	{$info.remarks}
+	       	
+         		</div>
+         	</div>
+         </li>
+       
+         <li class="newsmore">
+         	<div class="olditem">
+         		<div class="title">
+         		公众号：xifeier-AU9999
+         		</div>
+         	</div>
+         </li>
+       
+
+</ul>
+</div>
+</div>
+
+
+<!-- 产品字段信息 end -->
+
+<!-- 贵州国检 -->
+
+
+<div class="list">
+ <div class="applistBox">
+  <ul>
+  	
+    <li>
+      <div class="applistpic">
+       贵金属宝石证书条码
+      </div>
+      <div class="applisttxt">
+        <dl>
+          <dt></dt>
+          <dd>{$info.name}</dd>
+        </dl>
+      </div>
+    </li>
+  </ul>
+ </div>
+</div>
+
+   
+<a class="footer" href="#" target="_self"><span class="top">返回顶部</span></a>
+
+</div>
+<div align="center"><font size="2">贵州黔百年珠宝有限学校</font></div>
+ 
+
+<script>
+$(function(){
+  var width=$('.swipe-wrap div:first').width();
+  
+  $('.swipe-wrap div').css('height',width);
+})
+  
+</script>
+</body></html>
+

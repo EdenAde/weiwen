@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <record id="view_school_graph" model="ir.ui.view">
+         <field name="name">school.report.graph</field>
+         <field name="model">school.report</field>
+         <field name="arch" type="xml">
+             <graph string="学校分析" type="pivot" stacked="True">
+                 <field name="town_name"  type="col"/>
+                 <field name="name" type="row"/>
+                 <field name="book_all" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+
+
+
+    <!--<record id="filter_books_report_schools" model="ir.filters">-->
+        <!--<field name="name">按学校</field>-->
+        <!--<field name="model_id">book.report</field>-->
+        <!--<field name="user_id" eval="False"/>-->
+        <!--<field name="context">{'group_by': ['date:year', 'school_id']}</field>-->
+    <!--</record>-->
+
+    <!--<record id="view_books_search" model="ir.ui.view">-->
+        <!--<field name="name">book.report.search</field>-->
+        <!--<field name="model">book.report</field>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<search string="透视分析">-->
+                <!--<field name="date"/>-->
+
+                <!--<filter string="今年" name="year"  domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>-->
+                <!--<filter string="今天" name="day"  domain="[('date','&gt;=',(context_today() - datetime.timedelta(1)).strftime('%%Y-%%m-%%d'))]"/>-->
+                <!--<group expand="1" string="分组">-->
+                    <!--<filter string="学校" name="学校" context="{'group_by':'school_id'}"/>-->
+
+                    <!--<separator/>-->
+                    <!--<filter string="月份" context="{'group_by':'date:month'}" help="Ordered date of the sales order"/>-->
+                <!--</group>-->
+            <!--</search>-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <record id="action_school_report_all" model="ir.actions.act_window">
+        <field name="name">学校分析</field>
+        <field name="res_model">school.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph</field>
+        <!--<field name="search_view_id" ref="view_books_search"/>-->
+        <field name="context">{'graph_view_ref':'pos_library.view_school_graph'}
+        </field>
+    </record>
+
+    <menuitem action="action_school_report_all" id="menu_school_all" groups="pos_library.group_dictation_librarian" parent="base.menu_reporting_dashboard" sequence="12"/>
+
+</data>
+</openerp>

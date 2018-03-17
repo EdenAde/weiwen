@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <record id="view_library_graph" model="ir.ui.view">
+         <field name="name">library.report.graph</field>
+         <field name="model">library.report</field>
+         <field name="arch" type="xml">
+             <graph string="流通统计" type="pivot" stacked="True">
+                 <field name="school_id" type="row"/>
+                 <field name="date" interval="month" type="col"/>
+                 <field name="nbr" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+
+
+    <record id="view_library_graph_2" model="ir.ui.view">
+         <field name="name">library.report.graph</field>
+         <field name="model">library.report</field>
+         <field name="arch" type="xml">
+             <graph string="流通统计" type="pivot" stacked="True">
+                 <field name="categ_id" type="row"/>
+                 <field name="standard_id"  type="col"/>
+                 <field name="nbr" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+
+
+    <record id="filter_library_report_schools" model="ir.filters">
+        <field name="name">按学校</field>
+        <field name="model_id">library.report</field>
+        <field name="user_id" eval="False"/>
+        <field name="context">{'group_by': ['date:month', 'school_id']}</field>
+    </record>
+
+
+    <record id="filter_library_report_categ" model="ir.filters">
+        <field name="name">按分类</field>
+        <field name="model_id">library.report</field>
+        <field name="user_id" eval="False"/>
+        <field name="context">{'group_by': ['date:month', 'categ_id']}</field>
+    </record>
+
+
+    <record id="filter_library_report_issue" model="ir.filters">
+        <field name="name">按</field>
+        <field name="model_id">library.report</field>
+        <field name="user_id" eval="False"/>
+        <field name="context">{'group_by': ['date:month', 'issue_id']}</field>
+    </record>
+
+    <record id="view_library_search" model="ir.ui.view">
+        <field name="name">sale.report.search</field>
+        <field name="model">library.report</field>
+        <field name="arch" type="xml">
+            <search string="流通统计">
+                <field name="date"/>
+
+                <filter string="今年" name="year"  domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+                <filter string="今天" name="day"  domain="[('date','&gt;=',(context_today() - datetime.timedelta(1)).strftime('%%Y-%%m-%%d'))]"/>
+                <group expand="1" string="分组">
+                    <filter string="学校" name="学校" context="{'group_by':'school_id'}"/>
+
+                    <filter string="分类" name="Category" context="{'group_by':'categ_id'}"/>
+                    <filter string="状态" context="{'group_by':'state'}"/>
+
+                    <separator/>
+                    <filter string="月份" context="{'group_by':'date:month'}" help="Ordered date of the sales order"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+
+
+     <record id="view_library_search_2" model="ir.ui.view">
+        <field name="name">library.report.search</field>
+        <field name="model">library.report</field>
+        <field name="arch" type="xml">
+            <search string="流通统计">
+                <field name="date"/>
+                 <filter string="我的学校" name="myschool"  domain="[('user_id','=',uid)]"/>
+                <filter string="今年" name="year"  domain="[('date','&lt;=', time.strftime('%%Y-12-31')),('date','&gt;=',time.strftime('%%Y-01-01'))]"/>
+                <filter string="今天" name="day"  domain="[('date','&gt;=',(context_today() - datetime.timedelta(1)).strftime('%%Y-%%m-%%d'))]"/>
+                <group expand="1" string="分组">
+                    <filter string="分类" name="Category" context="{'group_by':'categ_id'}"/>
+                    <filter string="状态" context="{'group_by':'state'}"/>
+                    <separator/>
+                    <filter string="月份" context="{'group_by':'date:month'}" help="Ordered date of the sales order"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="view_library_book_issue_tree" model="ir.ui.view">
+            <field name="name">library.book.report.issue.tree</field>
+            <field name="model">library.report</field>
+            <field name="arch" type="xml">
+                <tree string="Books Issue" colors="blue:state in ('issue','reissue')">
+                    <field name="school_id"/>
+                    <field name="book_id"/>
+                    <field name="reader_id"/>
+                    <field name="date"/>
+                    <field name="date_return"/>
+                    <field name="state"/>
+                    <field name="actual_return_date"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+     <!--<record id="view_library_book_issue_tree2" model="ir.ui.view">-->
+            <!--<field name="name">library.book.report.issue.tree2</field>-->
+            <!--<field name="model">library.report</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<tree string="Books Issue">-->
+                    <!--<field name="book_id"/>-->
+
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+
+    <!--<record id="action_library_report_school2" model="ir.actions.act_window">-->
+        <!--<field name="name">流通统计</field>-->
+        <!--<field name="res_model">library.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree</field>-->
+        <!--<field name="context">{'tree_view_ref':'pos_library.view_library_book_issue_tree2'}-->
+        <!--</field>-->
+    <!--</record>-->
+
+
+     <!--<record id="view_library_book_issue_tree3" model="ir.ui.view">-->
+            <!--<field name="name">library.book.report.issue.tree3</field>-->
+            <!--<field name="model">library.report</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<tree string="Books Issue">-->
+                    <!--<field name="reader_id"/>-->
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+
+
+
+    <!--<record id="action_library_report_school3" model="ir.actions.act_window">-->
+        <!--<field name="name">流通统计</field>-->
+        <!--<field name="res_model">library.report</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree</field>-->
+        <!--&lt;!&ndash;<field name="context" eval="{'search_default_myschool': 1}"/>&ndash;&gt;-->
+        <!--<field name="context">{'tree_view_ref':'pos_library.view_library_book_issue_tree3'}-->
+        <!--</field>-->
+    <!--</record>-->
+
+
+
+
+
+
+
+    <record id="action_library_report_all" model="ir.actions.act_window">
+        <field name="name">流通统计</field>
+        <field name="res_model">library.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph,tree</field>
+        <field name="search_view_id" ref="view_library_search"/>
+        <field name="context">{'graph_view_ref':'pos_library.view_library_graph','tree_view_ref':'pos_library.view_library_book_issue_tree'}
+        </field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+        <record id="action_library_report_school" model="ir.actions.act_window">
+        <field name="name">流通统计</field>
+        <field name="res_model">library.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="search_view_id" ref="view_library_search_2"/>
+            <!--<field name="context" eval="{'search_default_myschool': 1}"/>-->
+        <field name="context">{'search_default_myschool':1,'graph_view_ref':'pos_library.view_library_graph_2','tree_view_ref':'pos_library.view_library_book_issue_tree'}
+
+        </field>
+
+
+    </record>
+
+
+    <menuitem action="action_library_report_all" id="menu_library_all" parent="base.menu_reporting_dashboard" groups="pos_library.group_dictation_librarian" sequence="10"/>
+
+
+    <menuitem action="action_library_report_school" id="menu_library_school" parent="board.menu_board_my_dash" sequence="12"/>
+
+
+</data>
+</openerp>

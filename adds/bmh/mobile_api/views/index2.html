@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title></title>
+
+    <style type="text/css">
+
+        *{margin:0;padding:0;list-style-type:none;}
+
+        body{font:12px/180% Arial, Helvetica, sans-serif;}
+
+        .demo{width:960px;margin:20px auto 0 auto;}
+
+        /*#shelf{width:900px;*/
+            /*height:20%;background:url("images/shelf-bg.png") no-repeat scroll 0 -25px transparent;}*/
+
+
+        /*#shelf{width:900px;*/
+        /*height:20%;*/
+
+        /*}*/
+
+
+        .itemTitle{padding-top:10px;}
+
+
+
+        /* container */
+
+        #container{width:850px;height:160px;margin-left:25px;}
+
+        #container img, #container .item{
+
+            width:100%;height:100%;
+
+            -webkit-border-radius:10px;
+
+            -moz-border-radius:10px;
+
+            -o-border-radius:10px;
+
+            border-radius:10px;
+
+            -moz-box-shadow:0px 5px 5px #777;
+
+            -webkit-box-shadow:0px 5px 5px #777;
+
+            box-shadow:0px 5px 5px #777;
+
+        }
+
+        #container .selectedItem{
+
+            -moz-box-shadow:0 4px 10px #0071BC;
+
+            -webkit-box-shadow:0 4px 10px #0071BC;
+
+            box-shadow:0 4px 10px #0071BC;
+
+            border:1px solid #0071BC;
+
+        }
+
+        #container .item{width:80px;height:80px;left:0px;}
+
+
+
+        /* container2 */
+
+        #container2{width:1050px;height:220px;margin-left:35px;}
+
+        #container2 img, #container2 .item{
+
+            width:100%;height:100%;
+
+            -webkit-border-radius:10px;
+
+            -moz-border-radius:10px;
+
+            -o-border-radius:10px;
+
+            border-radius:10px;
+
+            -moz-box-shadow:0px 5px 5px #777;
+
+            -webkit-box-shadow:0px 5px 5px #777;
+
+            box-shadow:0px 5px 5px #777;
+
+        }
+
+
+
+        /* similarity */
+
+        .similarity{bottom:5%;position:absolute;right:5%;font-size:2.5em;*font-size:1.3em;width:1.5em;height:1.5em;line-height:1.5em;text-align:center;}
+
+        .similarity{
+
+            -moz-border-radius:5px;
+
+            -webkit-border-radius:5px;
+
+            border-radius:5px;
+
+            background:#84C440;
+
+            background:-moz-linear-gradient(top, #84C440 0%, #3CB64A 100%);
+
+            background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#84C440), color-stop(100%,#3CB64A));
+
+            -webkit-box-shadow:inset 0px 1px 0px #a1d269;
+
+            -moz-box-shadow:inset 0px 1px 0px #a1d269;
+
+            box-shadow:inset 0px 1px 0px #a1d269;
+
+            text-shadow:0 1px 1px rgba(0, 0, 0, 0.5);
+
+
+
+            border-color:#8cc63f #6dc043 #359541 #6dc043;border-width:1px;border-style:solid;color:#fff;float:left;font-size:14px;font-weight:bold;padding:3px 6px;
+
+        }
+
+        .similarity:hover{
+
+            background:#bbde51;border-color:#bbde51 #bbde51 #9eba45 #bbde51;cursor:pointer;
+
+            -webkit-box-shadow:inset 0px 1px 0px #cde671;
+
+            -moz-box-shadow:inset 0px 1px 0px #cde671;
+
+            box-shadow:inset 0px 1px 0px #cde671;
+
+        }
+
+        body{
+            background-color:#1c1cc3!important;
+            color:white!important;
+            background-image: url(213.jpg);
+            background-size: cover;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.coverscroll.min.js"></script>
+    <script src="//api.html5media.info/1.1.8/html5media.min.js"></script>
+
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="xcConfirm.css"/>
+
+    <script src="xcConfirm.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- 
+    <link href=”http://vjs.zencdn.net/c/video-js.css” rel=”stylesheet”>
+    <script src=”http://vjs.zencdn.net/c/video.js”></script>
+ -->
+
+    <style>
+        .col-md-4 img{
+            text-align: center;
+        }
+        .title1{
+            font-size: 25px;
+        }
+        .title2{
+            font-size: 20px;
+        }
+        .itemTitle{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+<div class="row" style="margin-top: 10px" >
+    <div class="col-md-8 col-md-offset-2">
+    <video  id="myvideo" width="100%" height="auto" controls="controls" > 
+                你的浏览器不支持HTML5播放此视频 
+        <span style="white-space:pre">    </span><!-- 支持播放的文件格式 --> 
+        <source src="http://www.zyhanyuqi.com/untitled9/3.mp4" type='video/mp4' />  
+ </video>
+
+ <!-- 
+
+        <video src="http://www.zyhanyuqi.com/untitled9/sp3.mp4" width="100%" height="600px"  preload="auto" autoplay="true" loop="true"></video> -->
+    </div>
+
+</div>
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-6 col-md-offset-3" style="text-align: center">
+        <img src="12.png" height="90px" alt=""/>
+
+    </div>
+</div>
+
+<div class="row demo" style="height: 30%;text-align: center;margin-left: 130px" >
+
+    <div id="shelf"  class="col-md-6 col-md-offset-3" >
+
+        <div id="container2">
+
+            <img class="link1 onconstruct" title="无线校园" src="images/1.png" />
+
+            <img class="link2 onconstruct" title="阅卷系统" src="images/258.jpg" />
+
+            <img class="link3 onconstruct" title="安全校园" src="images/3.png" />
+
+
+            <img  class="link5 " title="图书室" src="images/5.png" />
+
+
+            <img  class="link4 " title="班班通" src="images/4.png" />
+
+
+
+            <img  class="link6 onconstruct" title="实验室" src="images/6.png" />
+            <img  class="link7 onconstruct" title="备授课" src="images/7.png" />
+
+
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            $('#container2').coverscroll();
+
+            $('.onconstruct').dblclick(function(){
+                var txt=  "正在建设中";
+                window.wxc.xcConfirm(txt);
+
+            })
+
+            $('.link4').dblclick(function(){
+                window.location.href="container.html"
+            })
+
+            $('.link5').dblclick(function(){
+                window.location.href="container2.html"
+            })
+
+        });
+
+    </script>
+
+    <div id="shelf" style="display: none">
+
+        <div id="container">
+
+            <div class="item">
+
+                <img src="images/1.jpg" />
+
+                <div class="similarity">05</div>
+
+                <div class="itemTitle">the title 1</div>
+
+            </div>
+
+        </div>
+
+    </div><!--shelf end-->
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            $('#container').coverscroll({
+
+                items:'.item',
+
+                minfactor:10,
+
+                scalethreshold:5,
+
+                staticbelowthreshold:true,
+
+                distribution:1
+
+            });
+
+        });
+
+        // 演示，动态地添加项目的CoverScroll
+
+        var cnt = 0;
+
+        var aitems = [
+
+            '<div class="item"><img  src="images/2.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 2</div></div>',
+
+            '<div class="item"><img  src="images/3.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 3</div></div>',
+
+            '<div class="item"><img  src="images/4.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 4</div></div>',
+
+            '<div class="item"><img  src="images/5.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 5</div></div>',
+
+            '<div class="item"><img  src="images/6.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 6</div></div>',
+
+            '<div class="item"><img  src="images/7.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 7</div></div>',
+
+//            '<div class="item"><img " src="images/1.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 8</div></div>',
+//
+//            '<div class="item"><img " src="images/2.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 9</div></div>',
+//
+//            '<div class="item"><img " src="images/3.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 10</div></div>',
+//
+//            '<div class="item"><img " src="images/4.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 11</div></div>',
+//
+//            '<div class="item"><img " src="images/5.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 12</div></div>',
+//
+//            '<div class="item"><img " src="images/6.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 13</div></div>',
+//
+//            '<div class="item"><img " src="images/7.jpg" /><div class="similarity">05</div><div class="itemTitle">the title 14</div></div>'
+
+        ];
+
+        function addItem(){
+
+            $('#container').append(aitems[cnt]);
+
+            $('#container').coverscroll({
+
+                items:'.item',
+
+                minfactor:10,
+
+                scalethreshold:5,
+
+                staticbelowthreshold:true,
+
+                distribution:1,
+
+                bendamount:1.5,
+
+                movecallback:getStatus
+
+            });
+
+            cnt++;
+
+            if(cnt >= aitems.length){
+
+                cnt=0
+
+            }
+
+        }
+
+
+
+        function getStatus(){
+
+            var stats = ($('#container .selectedItem').index()+1)+' of '+$('#container .item').length;
+
+            $('#stats').html(stats);
+
+        }
+
+
+
+         $(document).ready(function(){ 
+                             video.play();   
+                        }); 
+                           
+                        var vList = ['http://www.zyhanyuqi.com/untitled9/2.mp4', 'http://www.zyhanyuqi.com/untitled9/3.mp4']; // 初始化播放列表   
+                        var vLen = vList.length;  
+                        var curr = 0;  
+                        var video = document.getElementById("myvideo");   
+                        video.addEventListener('ended', function(){ 
+                            play(); 
+                        });   
+                            
+                        function play() {   
+                            video.src = vList[curr];   
+                            video.load();    
+                            video.play();   
+                            curr++;   
+                            if(curr >= vLen){   
+                                curr = 0; //重新循环播放 
+                            }   
+                             
+                        }   
+
+
+                        
+
+    </script>
+
+
+</div>
+
+
+<div class="row">
+    <p style="text-align:center;width:900px; display: none">
+
+        <a onClick="$('#container').coverscroll('prev')" href="javascript:;">上一个</a>
+
+        &nbsp;<span id="stats"></span>&nbsp;
+
+        <a onClick="$('#container').coverscroll('next')" href="javascript:;">下一个</a>
+
+        <br/><br/>
+
+        <button onClick="addItem()">添加图片</button>
+
+    </p>
+
+</div>
+
+<div class="row" style="text-align:center;margin:70px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+    <p style="text-align: center;font-size: 20px">技术支持:遵义涵雨淇网络科技有限公司</p>
+
+</div>
+
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+
+                </h4>
+            </div>
+            <div class="modal-body">
+                正在建设中。
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary">
+                    确定
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+//    $(function () { $('#myModal').modal({
+//        keyboard: true
+//    })});
+</script>
+
+</body>
+</html>

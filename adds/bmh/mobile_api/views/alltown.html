@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+<script src="/mobile_sample/static/src/js/jquery.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="/mobile_sample/static/src/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="/mobile_sample/static/src/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="/mobile_sample/static/src/js/bootstrap.min.js" ></script>
+<script src="/mobile_sample/static/src/js/bootstrap-table.js"></script>
+    <link rel="stylesheet" href="/mobile_sample/static/src/css/bootstrap-table.css">
+
+<script src="//cdn.bootcss.com/lodash.js/4.17.4/lodash.js"></script>
+
+    <style>
+    body{
+
+
+        background-image: url( '/mobile_sample/static/src/img/zy.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+
+
+
+    /*-moz-background-size: 100% 100%;   Firefox 3.6*/
+    /*-o-background-size: 100% 100%; Opera 9.5*/
+    /*-webkit-background-size: 100% 100%; Safari 3.0*/
+    /*background-size: 100% 100%;  Firefox 4.0 and other CSS3-compliant browsers*/
+    /*-moz-border-image: url(/mobile_sample/static/src/img/msz.jpg) 0;  Firefox 3.5*/
+    /*filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/mobile_sample/static/src/img/zy.jpg', sizingMethod='scale'); for < ie9*/
+
+    }
+.sta{
+    background: rgba(198, 210, 250, 0.78);
+    padding: 0px 20px 20px;
+}
+
+#table,#table1,#table2,#tabl3{
+    height: 70%!important;
+}
+
+.header{
+        position: relative;
+    text-align: center;
+    background-color: #27AE60;
+    color: #fff;
+    margin-bottom: 0;
+
+}
+
+    .highlight{
+        position: relative;
+        bottom: 0px;
+    }
+
+        .rotate{
+
+            -webkit-transform: rotateZ(180deg);
+            -moz-transform: rotateZ(180deg);
+            -o-transform: rotateZ(180deg);
+            -ms-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+
+        }
+.table td{
+        white-space: nowrap;
+}
+        .fixed-table-toolbar{
+            display: none;
+        }
+</style>
+</head>
+<body >
+<div class="header pjumbotron">
+  <h1>全区数据预览</small></h1>
+</div>
+
+
+
+<div class="pops">
+
+</div>
+
+
+
+<div class="row" style="margin-top: 10%;margin-bottom: 10%">
+
+  <div class="col-md-12 ">
+
+
+
+    <div class="bs-table col-md-4 sta">
+        <figure class="highlight">
+    <h3>书籍借阅统计 <span class="label label-success">小学</span></h3>
+
+
+     <div class="table-responsive">
+            <table id="table" data-height="600" class="table text-nowrap">
+
+            <thead>
+            
+        </thead>
+        <tbody>
+           
+        </tbody>
+
+        </table>
+         </div>
+        
+       </figure>
+    </div>
+
+
+
+   <div class="bs-table t-2 col-md-4 sta" >
+        <figure class="highlight">
+         <h3>书籍借阅统计 <span class="label label-info">中学</span></h3>
+   <div class="table-responsive">
+            <table id="table2" data-height="600" class="table text-nowrap">
+
+            <thead>
+            
+        </thead>
+        <tbody>
+           
+        </tbody>
+
+        </table>
+         </div>
+        
+       </figure>
+    </div>
+
+
+      <div class="bs-table t-3 col-md-4 sta " >
+        <figure class="highlight">
+         <h3>书籍借阅统计 <span class="label label-warning">九年一贯</span></h3>
+
+         <div class="table-responsive">
+            <table id="table3" data-height="600" class="table text-nowrap">
+
+            <thead>
+            
+        </thead>
+        <tbody>
+           
+        </tbody>
+
+        </table>
+         </div>
+        
+       </figure>
+    </div>
+
+
+  </div>
+    <footer style="display: none">
+    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand rotate" href="/statistics">
+      <span class="glyphicon glyphicon-share-alt" aria-hidden="true" style="font-size: 33px"></span>
+      </a>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+
+
+
+
+
+<script>
+
+
+
+    function sort_by_town_school(dataArray){
+
+        var newArray = _.sortBy(dataArray, ['town_sort', 'school_sort']);
+        return newArray;
+
+    }
+
+    
+    function responseHandler1(res) {
+        //console.log(res)
+        var rs = eval("("+res+")");
+
+       // console.log(rs.rows);
+        return rs.rows
+    }
+
+
+    function detailFormatter2(index, row, element) {
+        console.log('123')
+        console.log(index)
+         console.log(row)
+         return '<table id="gtable'+row.id+'" data-toggle="gtable'+row.id+'" data-toolbar="#toolbar'+row.id+'" data-height="460"  data-content-type="application/text" data-response-handler="responseHandler1" data-url="http://114.215.82.219:8081/api/library/school_id/'+row.school_id+'/grade/'+row.id+'"> <thead> <tr> <th data-field="name">班级</th> <th data-field="class_sum_stu" data-sortable="true">班级总读者</th> <th data-field="class_sum" class-sortable="true">年级总流通</th><th data-field="issue_today" data-sortable="true">今日借书</th> </tr> </thead> </table><script>$("#gtable'+row.id+'").bootstrapTable({onClickRow:function(e){window.location.href="/statistics/class/"+e.id}});<\/script>';
+    }
+
+    function detailFormatter3(index, row, element) {
+        console.log('123')
+        console.log(index)
+         console.log(row)
+         return '<table id="g2table'+row.id+'" data-toggle="g2table'+row.id+'" data-toolbar="#toolbar'+row.id+'" data-height="460"  data-content-type="application/text" data-response-handler="responseHandler1" data-url="http://114.215.82.219:8081/api/library/school_id/'+row.school_id+'/grade/'+row.id+'"> <thead> <tr> <th data-field="name">班级</th> <th data-field="class_sum_stu" data-sortable="true">班级总读者</th> <th data-field="class_sum" class-sortable="true">年级总流通</th><th data-field="issue_today" data-sortable="true">今日借书</th> </tr> </thead> </table><script>$("#g2table'+row.id+'").bootstrapTable({onClickRow:function(e){window.location.href="/statistics/class/"+e.id}});<\/script>';
+    }
+
+    function detailFormatter4(index, row, element) {
+        console.log('123')
+        console.log(index)
+         console.log(row)
+         return '<table id="g1table'+row.id+'" data-toggle="g1table'+row.id+'" data-toolbar="#toolbar'+row.id+'" data-height="460"  data-content-type="application/text" data-response-handler="responseHandler1" data-url="http://114.215.82.219:8081/api/library/school_id/'+row.school_id+'/grade/'+row.id+'"> <thead> <tr> <th data-field="name">班级</th> <th data-field="class_sum_stu" data-sortable="true">班级总读者</th> <th data-field="class_sum" class-sortable="true">班级总流通</th><th data-field="issue_today" data-sortable="true">今日借书</th> </tr> </thead> </table><script>$("#g1table'+row.id+'").bootstrapTable({onClickRow:function(e){window.location.href="/statistics/class/"+e.id}});<\/script>';
+    }
+
+$(function() {
+
+
+   // var WebuiPopoversself = WebuiPopovers
+
+
+    var $table1 = $('#table'),
+        $table2 = $('#table2'),
+        $table3 = $('#table3');
+
+
+    $.get("http://114.215.82.219:8081/api/library/statistics/all").done(function (data) {
+         var dataArray=eval("("+data+")");
+         $('#table').bootstrapTable({
+             onClickRow:function (e) {
+               //  $table1.bootstrapTable('expandRow', 1);
+                //console.log(e)
+                //window.location.href='/statistics/school/'+e.id
+               //  WebuiPopoversself.show('.pops');
+                // $('<a href="#" class="show-pop data-placement="auto-bottom"  data-title="Dynamic Title" data-content="Dynamic content"> Dynamic created Pop </a>').appendTo('.pops');
+             },
+             detailView:true,
+             detailFormatter:function(index, row, element) {
+                return '<table id="table'+row.id+'" data-toggle="table'+row.id+'" data-toolbar="#toolbar'+row.id+'" data-height="460" data-detail-view="true" data-detail-formatter="detailFormatter2" data-content-type="application/text" data-response-handler="responseHandler1" data-url="http://114.215.82.219:8081/api/library/school/'+row.id+'"> <thead> <tr> <th data-field="name">年级</th> <th data-field="grade_sum_stu" data-sortable="true">年级总读者</th> <th data-field="issues_count" data-sortable="true">年级总流通</th> <th data-field="issue_today" data-sortable="true">今日借书</th></tr> </thead> </table><script>$("#table'+row.id+'").bootstrapTable();<\/script>';
+            },
+             data: sort_by_town_school(_.filter(dataArray.table,{division:1})),
+             striped: true,
+             title:"123123",
+             sortable:true,
+             columns: [
+                 {
+        field: 'com_name',
+        title: '&nbsp;&nbsp;  学校名称   ',
+
+    }, {
+        field: 'book_amount',
+        title: '藏书量(册)',
+
+                 sortable:true
+
+    }, {
+        field: 'student_amount',
+        title: '学生总数(人)',
+
+                 sortable:true
+    }, {
+        field: 'avg_book',
+        title: '生均册数(册)',
+
+                 sortable:true
+    }, {
+        field: 'avg_issue',
+        title: '图书借阅率(％)',
+        width:'10%',
+                 sortable:true
+    },
+    {
+        field: 'today_issue',
+        title: '今日借书(册)',
+
+        sortable:true
+    },
+
+             ]
+
+         });
+        var index2=_.findIndex(dataArray.table,{division:2});
+        var index3=_.findIndex(dataArray.table,{division:3});
+        console.log(index3);
+        console.log(index2);
+        if(index3!=-1){
+             console.log(sort_by_town_school(_.filter(dataArray.table,{division:3})));
+            $(".t-3").show();
+             $('#table3').bootstrapTable({
+                width:400,
+             detailView:true,
+             detailFormatter:function(index, row, element) {
+                return '<table id="tfable'+row.id+'" data-toggle="tfable'+row.id+'" data-toolbar="#toolbar'+row.id+'" data-height="460" data-detail-view="true" data-detail-formatter="detailFormatter3" data-content-type="application/text" data-response-handler="responseHandler1" data-url="http://114.215.82.219:8081/api/library/school/'+row.id+'"> <thead> <tr> <th data-field="name">年级</th> <th data-field="grade_sum_stu" data-sortable="true">年级总读者</th> <th data-field="grade_sum" data-sortable="true">年级总流通</th> <th data-field="issue_today" data-sortable="true">今日借书</th></tr> </thead> </table><script>$("#tfable'+row.id+'").bootstrapTable();<\/script>';
+            },
+             data: sort_by_town_school(_.filter(dataArray.table,{division:3})),
+             striped: true,
+              sortable:true,
+             columns: [{
+        field: 'com_name',
+        width:100,
+        title: '学校名称 '
+    },  {
+        field: 'book_amount',
+        title: '藏书量(册)',
+
+                 sortable:true
+
+    }, {
+        field: 'student_amount',
+        title: '学生总数(人)',
+
+                 sortable:true
+    }, {
+        field: 'avg_book',
+        title: '生均册数(册)',
+
+                 sortable:true
+    }, {
+        field: 'avg_issue',
+        title: '图书借阅率(％)',
+        width:'10%',
+                 sortable:true
+    },
+    {
+        field: 'today_issue',
+        title: '今日借书(册)',
+
+        sortable:true
+    },
+
+             ]
+
+         });
+    }
+
+        if(index2!=-1){
+             console.log(sort_by_town_school(_.filter(dataArray.table,{division:2})));
+            $(".t-2").show();
+             $('#table2').bootstrapTable({
+                width:400,
+             data: sort_by_town_school(_.filter(dataArray.table,{division:2})),
+             striped: true,
+detailView:true,
+             detailFormatter:function(index, row, element) {
+                return '<table id="tffable'+row.id+'" data-toggle="tffable'+row.id+'" data-toolbar="#toolbar'+row.id+'" data-height="460" data-detail-view="true" data-detail-formatter="detailFormatter4" data-content-type="application/text" data-response-handler="responseHandler1" data-url="http://114.215.82.219:8081/api/library/school/'+row.id+'"> <thead> <tr> <th data-field="name">年级</th> <th data-field="grade_sum_stu" data-sortable="true">年级总读者</th> <th data-field="issues_count" data-sortable="true">年级总流通</th> <th data-field="issue_today" data-sortable="true">今日借书</th></tr> </thead> </table><script>$("#tffable'+row.id+'").bootstrapTable();<\/script>';
+            },
+              sortable:true,
+             columns: [{
+        field: 'com_name',
+        width:100,
+        title: '学校名称 '
+    },  {
+        field: 'book_amount',
+        title: '藏书量(册)',
+
+                 sortable:true
+
+    }, {
+        field: 'student_amount',
+        title: '学生总数(人)',
+
+                 sortable:true
+    }, {
+        field: 'avg_book',
+        title: '生均册数(册)',
+
+                 sortable:true
+    }, {
+        field: 'avg_issue',
+        title: '图书借阅率(％)',
+        width:'10%',
+                 sortable:true
+    },
+    {
+        field: 'today_issue',
+        title: '今日借书(册)',
+
+        sortable:true
+    },
+
+             ]
+
+         });
+    }
+
+
+
+//
+//        option.xAxis[0].data=dataArray.xs
+//        option.series[0].data=dataArray.avgs
+//        option.series[1].data=dataArray.r_issues
+//         myChart.setOption(option,true);
+
+
+        // console.log("dataArraySort");
+        // console.log(data1);
+     });
+
+
+})
+
+</script>
+</body>
+</html>

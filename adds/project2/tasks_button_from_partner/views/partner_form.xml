@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="partner_tasks" >
+            <field name="name">Tasks from projects related to Partner</field>
+            <field name="res_model">project.task</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="project.view_task_kanban" />
+            <field name="domain">[('project_id.partner_id', '=', [active_id])]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_partner_form_tasks">
+            <field name="name">view_partner_form_tasks</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button class="oe_stat_button" type="action" name="%(partner_tasks)d" context="{}" icon="fa-tasks" attrs="{'invisible': [('tasks_count', '=', 0)]}" modifiers="{'invisible': [['tasks_count', '=', 0]]}">
+                        <field string="All Tasks" name="tasks_count" widget="statinfo"/>
+                    </button>     
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data noupdate="1">
+        <record model="project.task.type" id="issue_converted_to_task">
+            <field name="name">Converted to Task</field>
+            <field name="sequence">42</field>
+        </record>
+    </data>
+</openerp>

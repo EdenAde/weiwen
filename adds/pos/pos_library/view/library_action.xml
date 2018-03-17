@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+
+
+<record id="view_update_model_form" model="ir.ui.view">
+            <field name="name">model.update.form</field>
+            <field name="model">model.update.fields</field>
+            <field name="arch" type="xml">
+               <form string="批量修改">
+                   <field name="field_id" widget="selection" domain="[('ttype', 'not in', ['one2many', 'refenrence', 'function','One2many', 'Refenrence', 'Function'])]"
+                               on_change="onchange_field_id(field_id)"                 context="{'model_id_list':'[152,]'}"
+                   ></field>
+                   <field name="related_field_model" invisible="1"/>
+                   <field required="1" name="target_field_name" invisible="1"/>
+                    <field required="1" name="field_type" invisible="1"/>
+                   <field required="1" name="field_id_model" invisible="1"/>
+                    <newline />
+                    <separator string="改为"/>
+
+                    <field required="1" name="update_value" attrs="{'invisible': [('field_type','in',['Many2one','many2one','selection','Selection'])]}"></field>
+
+                   <widget type="Library_batch_update"></widget>
+
+                   <newline />
+
+
+               </form>
+            </field>
+        </record>
+
+
+    <record id="view_update_model_form_student" model="ir.ui.view">
+            <field name="name">model.update.form</field>
+            <field name="model">model.update.fields.student</field>
+            <field name="arch" type="xml">
+               <form string="批量修改">
+                   <field name="field_id" widget="selection" domain="[('ttype', 'not in', ['one2many', 'refenrence', 'function','One2many', 'Refenrence', 'Function'])]"
+                               on_change="onchange_field_id(field_id)"                 context="{'model_id_list':'[417,]'}"
+                   ></field>
+                   <field name="related_field_model" invisible="1"/>
+                   <field required="1" name="target_field_name" invisible="1"/>
+                    <field required="1" name="field_type" invisible="1"/>
+                   <field required="1" name="field_id_model" invisible="1"/>
+                    <newline />
+                    <separator string="改为"/>
+
+                    <field required="1" name="update_value" attrs="{'invisible': [('field_type','in',['Many2one','many2one','selection','Selection'])]}"></field>
+
+                   <widget type="Library_batch_update"></widget>
+
+                   <newline />
+
+
+               </form>
+            </field>
+        </record>
+
+
+    <record id="view_update_model_form_teacher" model="ir.ui.view">
+            <field name="name">model.update.form</field>
+            <field name="model">model.update.fields.teacher</field>
+            <field name="arch" type="xml">
+               <form string="批量修改">
+                   <field name="field_id" widget="selection" domain="[('ttype', 'not in', ['one2many', 'refenrence', 'function','One2many', 'Refenrence', 'Function'])]"
+                               on_change="onchange_field_id(field_id)"                 context="{'model_id_list':'[189,]'}"
+                   ></field>
+                   <field name="related_field_model" invisible="1"/>
+                   <field required="1" name="target_field_name" invisible="1"/>
+                    <field required="1" name="field_type" invisible="1"/>
+                   <field required="1" name="field_id_model" invisible="1"/>
+                    <newline />
+                    <separator string="改为"/>
+
+                    <field required="1" name="update_value" attrs="{'invisible': [('field_type','in',['Many2one','many2one','selection','Selection'])]}"></field>
+
+                   <widget type="Library_batch_update"></widget>
+
+                   <newline />
+
+
+               </form>
+            </field>
+        </record>
+
+
+    <record id="action_model_multi_update" model="ir.actions.act_window">
+            <field name="name">update</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model.update.fields</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_update_model_form"/>
+
+            <field name="help"></field>
+    </record>
+
+
+    <record id="action_model_multi_update_teacher" model="ir.actions.act_window">
+            <field name="name">update</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model.update.fields.teacher</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_update_model_form_teacher"/>
+
+            <field name="help"></field>
+    </record>
+
+    <record id="action_model_multi_update_student" model="ir.actions.act_window">
+            <field name="name">update</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">model.update.fields.student</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_update_model_form_student"/>
+            <field name="help"></field>
+    </record>
+
+
+
+
+    <act_window id="action_model_multi_update" res_model="model.update.fields" src_model="product.product" target="new" multi="True" key2="client_action_multi" view_mode="form" name="批量更新" />
+
+
+    <act_window id="action_model_multi_update_student" res_model="model.update.fields.student" src_model="student.student" target="new" multi="True" key2="client_action_multi" view_mode="form" name="批量更新" />
+
+
+    <act_window id="action_model_multi_update_teacher" res_model="model.update.fields.teacher" src_model="hr.employee" target="new" multi="True" key2="client_action_multi" view_mode="form" name="批量更新" />
+
+
+</odoo>

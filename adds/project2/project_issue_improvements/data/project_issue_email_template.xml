@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+        <record id="email_template_issue_email_matching_answer" model="mail.template">
+            <field name="name">Project issue - Email matching answer</field>
+            <field name="email_from">${(object.user_id.email or 'noreply@abakusitsolutions.eu')|safe}</field>
+            <field name="subject">subject_email_template_issue_email_matching_answer</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="model_id" ref="project_issue.model_project_issue"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="body_html">body_html_email_template_issue_email_matching_answer</field>
+        </record>
+    </data>
+    <data>
+        <record id="email_template_new_issue_email_to_SM" model="mail.template">
+            <field name="name">Project issue - New issue email to SM</field>
+            <field name="email_from">${(object.user_id.email or 'noreply@abakusitsolutions.eu')|safe}</field>
+            <field name="subject">New issue created from ${(object.partner_id.name or 'UNKNOWN (create new contact in projects partner)')|safe}</field>
+            <field name="model_id" ref="project_issue.model_project_issue"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">&lt;p&gt;Hello,&lt;/p&gt;&lt;p&gt;A new Issue has been created by email in Odoo.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Title: ${object.name}&lt;/li&gt;&lt;li&gt;Author: ${object.email_from}&lt;/li&gt;&lt;li&gt;Project: ${(object.project_id.name or 'no project')|safe}&lt;/li&gt;&lt;li&gt;Link: &lt;a href="https://my.abakusitsolutions.eu/web#id=${object.id}&amp;view_type=form&amp;model=project.issue&amp;menu_id=558&amp;action=737"&gt;click here&lt;/a&gt; (https://my.abakusitsolutions.eu/web#id=${object.id}&amp;view_type=form&amp;model=project.issue&amp;menu_id=558&amp;action=737)&lt;/li&gt;&lt;/ul&gt;
+&lt;br /&gt;
+&lt;p&gt;Thanks, The Odoo System&lt;/p&gt;
+            </field>
+        </record>
+    </data>
+</openerp>

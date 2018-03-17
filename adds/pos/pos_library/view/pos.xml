@@ -1,0 +1,484 @@
+<?xml version="1.0"?>
+<openerp>
+
+
+
+
+
+
+    <record id="view_library_card_form_1" model="ir.ui.view">
+            <field name="name">library.card.form.2</field>
+            <field name="model">library.card</field>
+            <field name="inherit_id" ref="library.product_card_form_view"/>
+            <field name="arch" type="xml">
+
+                <data>
+
+                    <xpath expr="//field[@name='user']" position="after">
+                            <field name="type" string="读者类型"></field>
+                    </xpath>
+
+
+                    <xpath expr="//field[@name='book_limit']" position="replace">
+                            <field name="type_book_limit" string="允许借出本数"></field>
+                        <field name="type_day_limit" string="允许借出天数"></field>
+                    </xpath>
+                    <xpath expr="//sheet" position="inside">
+
+                         <notebook>
+                     <page string="已借图书">
+                         <field name="issue_ids"  >
+                             <tree string="已借图书">
+                                        <field name="name"/>
+                                        <field name="state" />
+                                        <field name="date_issue" />
+                             </tree>
+                         </field>
+                     </page>
+
+                              <page string="未还图书">
+                                  <field name="issue_all_ids">
+                                      <field name="name"/>
+                                        <field name="state" />
+                                        <field name="date_issue" />
+
+                                  </field>
+                     </page>
+
+
+                    </notebook>
+
+
+
+
+                    </xpath>
+                </data>
+            </field>
+
+    </record>
+
+
+
+    <!-- Form view of room reservation summary -->
+    <record id="library.summary_form_view" model="ir.ui.view">
+        <field name="name">library.summary.form</field>
+        <field name="model">library.summary</field>
+        <field name="arch" type="xml">
+            <form string="Library Summary">
+                <header>
+                    <separator string="数据总览" colspan="4" />
+                </header>
+                <sheet>
+	            	<group colspan="4" col="4" >
+	                	<div class="time_span">
+                        	<label for="date_from" string="时间段"/>
+                            <field name="date_from" class="oe_inline"/>
+                                        至
+                            <field name="date_to" class="oe_inline"/>
+                        </div>
+                    </group>
+	                <notebook>
+	                	<page string="今日数据">
+	                    	<field name="summary_header" colspan="4" invisible="1" />
+	                        <field name="library_summary" colspan="4" invisible="1" />
+	                        <widget type="Library_Dashboard_Today"></widget>
+	                    </page>
+
+                        <page string="时间段">
+	                    	<field name="summary_header" colspan="4" invisible="1" />
+	                        <field name="library_summary" colspan="4" invisible="1" />
+	                        <widget type="Library_Dashboard_History"></widget>
+	                    </page>
+
+
+	                </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <!-- Action for room reservation summary -->
+    <record id="action_library_summary" model="ir.actions.act_window">
+        <field name="name">Library Summary</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">library.summary</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+    </record>
+
+
+
+
+    <menuitem id="menu_action_library_summary" name="数据统计"
+        action="action_library_summary" parent="board.menu_board_my_dash"
+        sequence="1" />
+    <!-- add css / js -->
+        <template id="assets_backend" name="library assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+
+                <link rel="stylesheet" href="/pos_library/static/src/less/library_dashboard.less"/>
+
+                <script type="text/javascript" src="/pos_library/static/src/js/dashboard.js"></script>
+            </xpath>
+        </template>
+    <data>
+
+
+
+
+
+         <record model="ir.ui.view" id="view_product_form">
+            <field name="name">res.product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="library.view_product_book_form"/>
+            <field name="arch" type="xml">
+                <data>
+
+                    <xpath expr="//field[@name='categ_id']" position="after">
+                        <field name="cncateg" />
+                        <field name="school_id"/>
+                    </xpath>
+
+
+                </data>
+            </field>
+        </record>
+
+
+
+
+         <record model="ir.ui.view" id="view_school_form_city">
+            <field name="name">res.company.form</field>
+            <field name="model">school.school</field>
+            <field name="inherit_id" ref="school.view_school_school_form"/>
+            <field name="arch" type="xml">
+                <data>
+
+
+
+
+
+
+
+
+                    <!--<field name="department_id" options="attribute">-->
+                        <!--<attribute name="invisible">1</attribute>-->
+                    <!--</field>-->
+
+                    <!--<field name="job_id" options="attribute">-->
+                        <!--<attribute name="invisible">1</attribute>-->
+                    <!--</field>-->
+
+                    <!--<field name="parent_id" options="attribute">-->
+                        <!--<attribute name="invisible">1</attribute>-->
+                    <!--</field>-->
+
+
+                    <xpath expr="//field[@name='city']" position="replace">
+                        <field name="village" class="oe_no_button" placeholder="村" style="width: 17%%"
+                               options='{"no_open": True,"no_create":True}'
+                               />
+                        <field name="town" class="oe_no_button" placeholder="乡镇" style="width: 17%%"
+                               options='{"no_open": True,"no_create":True}'
+                              />
+                        <field name="county" class="oe_no_button" placeholder="区县" style="width: 17%%"
+                               options='{"no_open": True,"no_create":True}'
+                             />
+                        <field name="city_id" class="oe_no_button" placeholder="城市" style="width: 20%%"
+                               options='{"no_open": True,"no_create":True}'
+                              />
+                    </xpath>
+
+                    <xpath expr="//field[@name='currency_id']" position="after">
+                        <field name="division_name" />
+                        <field name="school_sort"/>
+                        <field name="user_id" groups="pos_library.group_dictation_librarian"/>
+                    </xpath>
+
+                </data>
+            </field>
+        </record>
+
+
+
+
+     <record id="view_library_book_issue_tree2" model="ir.ui.view">
+            <field name="name">library.book.report.issue.tree2</field>
+            <field name="model">library.book.issue</field>
+            <field name="arch" type="xml">
+                <tree string="Books Issue">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+    <record id="action_library_report_school2" model="ir.actions.act_window">
+        <field name="name">流通统计</field>
+        <field name="res_model">library.book.issue</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_library_book_issue_tree2"></field>
+
+    </record>
+
+
+     <record id="view_library_book_issue_tree3" model="ir.ui.view">
+            <field name="name">library.book.report.issue.tree3</field>
+            <field name="model">library.book.issue</field>
+            <field name="arch" type="xml">
+                <tree string="Books Issue">
+                    <field name="card_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+    <record id="action_library_report_school3" model="ir.actions.act_window">
+        <field name="name">流通统计</field>
+        <field name="res_model">library.book.issue</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+         <field name="view_id" ref="view_library_book_issue_tree3"></field>
+        <!--<field name="context" eval="{'search_default_myschool': 1}"/>-->
+        <!--<field name="context">{'tree_view_ref':'pos_library.view_library_book_issue_tree3'}-->
+        <!--</field>-->
+    </record>
+
+
+        <record model="ir.ui.view" id="view_student_form_city2">
+            <field name="name">res.student.form</field>
+            <field name="model">student.student</field>
+            <field name="inherit_id" ref="school.view_student_student_form_1"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='city']" position="replace">
+                        <field name="village" class="oe_no_button" placeholder="村" style="width: 17%%"
+                               options='{"no_open": True}'
+                               />
+                        <field name="town" class="oe_no_button" placeholder="乡镇" style="width: 17%%"
+                               options='{"no_open": True}'
+                              />
+                        <field name="county" class="oe_no_button" placeholder="区县" style="width: 17%%"
+                               options='{"no_open": True}'
+                             />
+                        <field name="city_id" class="oe_no_button" placeholder="城市" style="width: 20%%"
+                               options='{"no_open": True}'
+                              />
+                    </xpath>
+
+                    <xpath expr="//field[@name='year']" position="after">
+                       <field name="card_id" attrs="{'readonly':[('state','not in','draft')]}" context="{'is_link':1}" options="{&quot;no_create&quot;: True}"/>
+
+                    </xpath>
+
+                </data>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_student_form_city">
+            <field name="name">res.student.form</field>
+            <field name="model">student.student</field>
+            <field name="inherit_id" ref="school.view_student_student_form_2"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='city']" position="replace">
+                        <field name="village" class="oe_no_button" placeholder="村" style="width: 17%%"
+                               options='{"no_open": True}'
+                               />
+                        <field name="town" class="oe_no_button" placeholder="乡镇" style="width: 17%%"
+                               options='{"no_open": True}'
+                              />
+                        <field name="county" class="oe_no_button" placeholder="区县" style="width: 17%%"
+                               options='{"no_open": True}'
+                             />
+                        <field name="city_id" class="oe_no_button" placeholder="城市" style="width: 20%%"
+                               options='{"no_open": True}'
+                              />
+                    </xpath>
+
+
+
+                </data>
+            </field>
+        </record>
+
+        <record id="view_teacher_teacher_form_t" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form" />
+            <field name="arch" type="xml">
+                <data>
+
+
+                    <field name="name" position="attributes">
+
+                         <attribute name="placeholder">教师姓名</attribute>
+                    </field>
+
+                    <field name="address_id" position="attributes">
+                         <attribute name="on_change">on_change_address()</attribute>
+                         <attribute name="widget">selection</attribute>
+                    </field>
+
+                    <field name="school" position="attributes">
+
+                         <attribute name="widget">selection</attribute>
+                    </field>
+
+
+
+                    <field name="department_id" options="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </field>
+
+                    <field name="job_id" options="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </field>
+
+                    <field name="parent_id" options="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </field>
+
+
+                    <field name="is_school_teacher" position="attributes">
+
+                        <attribute name="on_change">on_change_is_school_teacher(is_school_teacher)</attribute>
+
+                    </field>
+
+
+                    <field name="parent_id" position="attributes">
+
+                         <attribute name="invisible">1</attribute>
+                    </field>
+
+
+                    <field name="address_id" position="attributes">
+
+                         <attribute name="invisible">1</attribute>
+                    </field>
+
+
+                    <field name="coach_id" position="attributes">
+
+                         <attribute name="invisible">1</attribute>
+                    </field>
+
+
+                    <field name="name" position="after">
+                         <field name="barcode" placeholder="教师编号" on_change="onchange_barcode(barcode)" required="1"/>
+                    </field>
+
+                </data>
+            </field>
+        </record>
+
+        <!-- Calendar view of hotel reservation -->
+    <record id="library_calendar_view" model="ir.ui.view">
+        <field name="name">Library Issue</field>
+        <field name="model">library.book.issue</field>
+        <field name="priority" eval="2" />
+        <field name="arch" type="xml">
+            <calendar string="Current Reservation" date_start="date_issue" color="student_id">
+                <field name="name" />
+            </calendar>
+        </field>
+    </record>
+
+
+        <!-- Action of hotel reservation -->
+    <record id="action_view_frontdesk_library_issue" model="ir.actions.act_window">
+        <field name="name">动态</field>
+        <field name="res_model">library.book.issue</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">calendar,form</field>
+        <field name="view_id" ref="library_calendar_view" />
+    </record>
+
+
+
+        <!-- Form view of board -->
+    <record id="board_library_issue_form" model="ir.ui.view">
+        <field name="name">library.board.frontdesk.form</field>
+        <field name="model">board.board</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="FrontDesk board">
+                <hpaned>
+                    <child1>
+                        <action string="Library Reservation" name="%(action_view_frontdesk_library_issue)d" />
+                    </child1>
+                </hpaned>
+            </form>
+        </field>
+    </record>
+
+
+<menuitem id="menu_action_library_issue_summary" name="图书馆动态" action="action_view_frontdesk_library_issue" parent="board.menu_board_my_dash" sequence="2" />
+
+
+
+         <record id="devision_form" model="ir.ui.view">
+            <field name="name">学部</field>
+            <field name="model">school.school.division</field>
+            <field name="arch" type="xml">
+                <form string="devisions">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View Of Library Rack -->
+
+        <record id="devision_tree" model="ir.ui.view">
+            <field name="name">school devision Tree</field>
+            <field name="model">school.school.division</field>
+            <field name="arch" type="xml">
+                <tree string="devisions">
+                    <field name="name"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View Of Library Rack -->
+
+        <!-- Actions Of Form & Tree Views Of Library Rack -->
+
+        <record id="action_school_devision" model="ir.actions.act_window">
+            <field name="name">学部</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">school.school.division</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+
+
+
+        <menuitem id="menu_school_devision" name="学部" parent="library.menu_library_config"
+                  action="action_school_devision"
+                  groups="school.group_school_administration,library.group_librarian,library.group_userian"/>
+
+
+
+
+
+        <!--<act_window id="book_update_lines"-->
+            <!--multi="True"-->
+            <!--key2="client_action_multi" name="批量更新"-->
+            <!--res_model="cancel" src_model="product.product"-->
+            <!--view_mode="form" target="new" view_type="form" view_id="cancel_order_lines_view"/>-->
+
+
+    </data>
+</openerp>

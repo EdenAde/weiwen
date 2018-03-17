@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+        <record model="ir.ui.view" id="project_issue_self_assign_button_view">
+            <field name="name">project_issue_self_assign_button_view</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='stage_id']" position="before">
+                    <button name="assign_to_me" type="object" string="I take it" class="btn btn-primary" />
+                </xpath>
+		    </field>
+        </record>
+	</data>
+</openerp>

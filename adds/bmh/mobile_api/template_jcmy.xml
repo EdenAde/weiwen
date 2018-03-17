@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+<!-- Customer Search Form -->
+<template id="searchProject" name="Partner List">
+	<t t-call="mobile.layout_weui">
+		<t t-set="title">Customers List</t>
+		<div>
+	    <!-- Top Bar -->
+
+        <div class="page__hd">
+        <h1 class="page__title">项目</h1>
+        <p class="page__desc">所有项目</p>
+        </div>
+            <!-- BODY -->
+        <div class="page__bd">
+            <div class="weui-panel weui-panel_access">
+            <div class="weui-panel__hd">项目列表</div>
+            <div class="weui-panel__bd">
+                <t t-if="projects">
+                <t t-foreach="projects" t-as="project">
+                <a  t-att-href="site_url('/tasks',['project'],project=project)" class="weui-media-box weui-media-box_appmsg">
+                    <div class="weui-media-box__hd">
+                        <img class="weui-media-box__thumb" t-att-src="website.image_url(project,'iamge')" alt=""/>
+                    </div>
+                    <div class="weui-media-box__bd">
+                        <h4 class="weui-media-box__title" t-esc="project.name"></h4>
+                        <t t-if="project.partner_id.street">
+
+                        <p class="weui-media-box__desc" t-esc="project.partner_id.name or ''+'/'+project.partner_id.street or ''"></p>
+                        </t>
+                    </div>
+                </a>
+                </t>
+                </t>
+
+            </div>
+
+        </div>
+            
+        </div>
+
+		</div>
+	</t>
+</template>
+
+
+
+ <template id="tasks" name="Partner List">
+	<t t-call="mobile.layout_weui">
+		<t t-set="title">Customers List</t>
+		<div>
+	    <!-- Top Bar -->
+
+        <div class="page__hd">
+        <h1 class="page__title">任务</h1>
+        <p class="page__desc" t-esc="project.name"></p>
+        </div>
+            <!-- BODY -->
+        <div class="page__bd">
+            <t t-foreach="tasks_by_stages" t-as="type_tasks">
+
+            <div class="weui-panel">
+            <div class="weui-panel__hd" t-esc="type_tasks['stage'].name"></div>
+
+            <div class="weui-panel__bd">
+
+                <t t-foreach="type_tasks['tasks']" t-as="task">
+                    <a  t-att-href="issues_url('/issues',['task'],task=task)" class="weui-media-box weui-media-box_appmsg">
+                    <div class="weui-media-box weui-media-box_text">
+                    <h4 class="weui-media-box__title" t-esc="task.name"></h4>
+                    <p class="weui-media-box__desc" t-esc="task.description"></p>
+                    <ul class="weui-media-box__info">
+                      <li class="weui-media-box__info__meta" t-esc="'进度'+str(task.progress)+'%'"></li>
+                      <li class="weui-media-box__info__meta"  >截止时间：<t t-if="task.date_deadline"><span t-field="task.date_deadline" t-field-options='{"format": "short"}'/></t></li>
+                      <li class="weui-media-box__info__meta weui-media-box__info__meta_extra" >更新时间：<span t-field="task.date_last_stage_update" t-field-options='{"format": "short"}'/></li>
+                    </ul>
+                  </div>
+                    </a>
+                </t>
+            </div>
+          </div>
+
+
+
+            </t>
+
+        </div>
+
+        </div>
+
+
+	</t>
+</template>
+
+
+
+        <template id="issues" name="Partner List">
+	<t t-call="mobile.layout_weui">
+		<t t-set="title">所有缺陷</t>
+
+
+        <div class="vux-header">
+        <div class="vux-header-left">
+          <a class="vux-header-back" href="javascript:history.back();"></a>
+
+        </div>
+        <h1 class="vux-header-title" ><span></span></h1>
+        <div class="vux-header-right">
+          <a class="vux-header-more" t-attf-href="/issue/add?task=#{task.id}">添加</a>
+
+        </div>
+        </div>
+
+
+		<div>
+	    <!-- Top Bar -->
+
+        <div class="page__hd">
+        <h1 class="page__title" t-esc="task.name"></h1>
+        <p class="page__desc" t-esc="'所属工程：'+task.project_id.name"></p>
+        </div>
+            <!-- BODY -->
+        <div class="page__bd">
+
+
+            <t t-foreach="task.issue_ids" t-as="issue">
+
+
+
+
+            <div class="weui-panel weui-panel_access">
+            <div class="weui-panel__hd" t-esc="issue.name">
+              <span class="weui-cell__ft" >问题编号：<span t-field="issue.issue_code"></span></span>
+            </div>
+            <div class="weui-panel__bd">
+                <a t-attf-href="/issue/detail?issue_id=#{issue.id}" class="weui-media-box weui-media-box_appmsg">
+                     <t t-foreach="issue.images" t-as="image">
+                    <div class="weui-media-box__hd" >
+                        <img class="weui-media-box__thumb" t-att-src="website.image_url(image,'datas')" src="" alt=""/>
+
+                    </div>
+                    </t>
+                    <div class="weui-media-box__bd">
+
+                        <p class="weui-media-box__desc" t-esc="issue.get_summery(30)"></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="weui-panel__ft">
+                <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
+                    <div class="weui-cell__bd" t-esc="'状态：'+issue.state"></div>
+                    <span class="weui-cell__ft"></span>
+                </a>
+            </div>
+        </div>
+            </t>
+
+
+
+        </div>
+
+		</div>
+	</t>
+</template>
+
+     </data>
+</openerp>

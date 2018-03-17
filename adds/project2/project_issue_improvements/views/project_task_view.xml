@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+        <record model="ir.ui.view" id="project_task_converted_from_issue_form">
+           <field name="name">project_task_converted_from_issue_form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <field name="stage_id" position="after">
+                    <button name="open_origin_issue" type="object" class="oe_highlight" string="Open converted Task" attrs="{'invisible':[('origin_issue_state', '!=', '')]}" />
+                </field>
+                <field name="planned_hours" position="after">
+                    <field name="origin_issue"/>
+                    <field name="origin_issue_state"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

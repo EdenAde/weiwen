@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record id="action_attendance_table_xls2" model="ir.actions.report.xml">
+      <field name="name">导出考勤表</field>
+      <field name="model">attendance_record.human_attendance_table</field>
+      <field name="type">ir.actions.report.xml</field>
+      <field name="report_name">attendance.table.xls2</field>
+      <field name="report_type">xls</field>
+      <field name="auto" eval="False"/>
+    </record>
+
+    <record model="ir.values" id="value_attendance_table_xls2">
+      <field name="name">导出考勤表</field>
+      <field name="key2">client_action_multi</field>
+      <field name="value" eval="'ir.actions.report.xml,' +str(ref('action_attendance_table_xls2'))" />
+      <field name="model">attendance_record.human_attendance_table</field>
+    </record>   
+    
+  </data>
+</openerp>

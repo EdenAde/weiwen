@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem icon="fa-truck" id="menu_tms" name="出差管理" sequence="10" web_icon="tms,static/description/icon.png"/>
+    <menuitem id="menu_tms_travels" name="出差管理" parent="menu_tms" sequence="10"/>
+    <menuitem id="menu_tms_reports" name="报告" parent="menu_tms" sequence="50"/>
+    <menuitem id="menu_tms_tollstation" name="Tollstation import" parent="menu_tms" sequence="20"/>
+    <menuitem id="menu_tms_settings" name="配置" parent="menu_tms" sequence="99"/>
+    <menuitem id="menu_tms_settings_unit" name="Units" parent="menu_tms_settings" sequence="30"/>
+    <menuitem id="menu_tms_settings_routes" name="路线" parent="menu_tms_settings" sequence="40"/>
+    <menuitem action="fleet.fleet_vehicle_state_action" groups="fleet.fleet_group_manager" id="tms_fleet_vehicle_state_menu" parent="menu_tms_settings_unit" sequence="13"/>
+    <menuitem action="fleet.fleet_vehicle_model_action" id="tms_fleet_vehicle_model" parent="menu_tms_settings_unit" sequence="14"/>
+    <menuitem action="fleet.fleet_vehicle_model_brand_action" id="tms_fleet_vehicle_make" parent="menu_tms_settings_unit" sequence="15"/>
+</odoo>

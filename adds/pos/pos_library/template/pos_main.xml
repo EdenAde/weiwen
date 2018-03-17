@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="assets" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/pos_library/static/src/js/db.js"></script>
+                <script type="text/javascript" src="/pos_library/static/src/js/model.js"></script>
+                <script type="text/javascript" src="/pos_library/static/src/js/screens.js"></script>
+                <script type="text/javascript" src="/pos_library/static/src/js/pop_ups.js"></script>
+                <script type="text/javascript" src="/pos_library/static/src/js/buttons.js"></script>
+                <script type="text/javascript" src="/pos_library/static/src/js/pos_library.js"></script>
+                <script type="text/javascript" src="/pos_library/static/src/js/dashboard.js"></script>
+
+
+            </xpath>
+            <xpath expr="//link[@id='pos-stylesheet']" position="after">
+              <link rel="stylesheet" href="/pos_library/static/src/css/library.css" />
+                <script type="text/javascript" src="/pos_library/static/src/js/bootstrap-select.js"></script>
+
+                 <link rel="stylesheet" href="/pos_library/static/src/css/bootstrap-select.less" />
+          </xpath>
+        </template>
+
+    </data>
+</openerp>

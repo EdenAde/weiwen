@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <!--<record id="user_form_view_roles" model="ir.ui.view">-->
+            <!--<field name="name">user_simple_form_view_roles</field>-->
+            <!--<field name="model">res.users</field>-->
+            <!--<field name="inherit_id" ref="base.view_users_simple_form"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<field name="id"/>-->
+                <!--<field name="groups_id" position="replace">-->
+                        <!--<newline/>-->
+                            <!--<field name="role_line_ids" nolabel="1">-->
+                                <!--<tree editable="bottom" colors="grey: not is_enabled;">-->
+                                    <!--<field name="role_id" string="角色" required="1"/>-->
+                                    <!--<field name="date_from" string="开始时间"/>-->
+                                    <!--<field name="date_to" string="结束时间"/>-->
+                                    <!--<field name="is_enabled" string="是否可用"/>-->
+                                <!--</tree>-->
+                            <!--</field>-->
+                <!--</field>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record id="view_partner_person_property_form" model="ir.ui.view">
+            <field name="name">res.partner.purchase.property.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="person_type"/>
+                </field>
+            </field>
+    </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Project Task Form View With Filtre on Assigned to for Team Members -->
+        <record id="project_tasks_form_with_team_filter" model="ir.ui.view">
+            <field name="name">project_tasks_form_with_team_filter</field>
+            <field name="inherit_id" ref="project.view_task_form2" />
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="domain">[]</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

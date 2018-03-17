@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="project_issue_email_matching" model="ir.actions.server">
+            <field name="name">Project issue email matching</field>
+            <field name="model_id" ref="model_project_issue"/>
+            <field name="state">code</field>
+            <field name="condition">True</field>
+            <field name="sequence">5</field>
+            <field name="code">
+
+# - Set followers and subtypes
+
+subtype_obj = pool['mail.message.subtype']
+discussion = subtype_obj.search(cr,uid,[('name','=','Discussions')], context=context) # DISCUSSION
+discussion = subtype_obj.browse(cr, uid, discussion[0])
+stage_changed = subtype_obj.search(cr,uid,[('res_model', '=', 'project.issue'), ('name','=','Stage Changed')], context=context) # STAGE CHANGED
+stage_changed = subtype_obj.browse(cr, uid, stage_changed[0])
+assigned = subtype_obj.search(cr,uid,[('name','=','Issue Assigned')], context=context) # ASSIGNED
+assigned  = subtype_obj.browse(cr, uid, assigned [0])
+
+mail_followers_obj = pool['mail.followers']
+mail_followers = mail_followers_obj.search(cr,uid,[('res_model','=','project.issue'),('res_id','=',obj.id)],context=context)
+if mail_followers:
+    for follow in mail_followers_obj.browse(cr, uid, mail_followers):
+        mail_followers_obj.write(cr,uid,follow.id,{'subtype_ids':[[4, discussion.id, False]]})
+        mail_followers_obj.write(cr,uid,follow.id,{'subtype_ids':[[4, stage_changed.id, False]]})
+        mail_followers_obj.write(cr,uid,follow.id,{'subtype_ids':[[4, assigned  .id, False]]})
+
+# - Project Matching
+
+generic_email_suffixes = ['gmail.com', 'hotmail.com', 'skyet.be', 'live.com', 'hotmail.fr', 'yahoo.com', 'yahoo.fr']
+email_match = False
+email_match_email = ''
+email_match_partner_id = None
+
+projects = pool['project.project'].search(cr, uid, [('active','=',True)])
+is_project_found = False
+if projects:
+    for project in pool['project.project'].browse(cr, uid, projects):
+        if (not project.analytic_account_id.first_subscription_id or (project.analytic_account_id.first_subscription_id and project.analytic_account_id.first_subscription_id.state == 'open')) and project.analytic_account_id.partner_id and 'bl' in project.analytic_account_id.name.lower():
+            project_emails = []
+            for partner in project.analytic_account_id.partner_id.child_ids:
+                if partner.email:
+                    project_emails.append([partner.email.lower(), partner.id])
+            if project.analytic_account_id.partner_id.email:
+                project_emails.append([project.analytic_account_id.partner_id.email.lower(), project.analytic_account_id.partner_id.id])        
+
+            email_suffix = obj.email_from.split("@")[1].lower()
+            email_suffix = email_suffix.replace('&#60;', '') # lower than
+            email_suffix = email_suffix.replace('&#62;', '') # greater than
+            email_simple = obj.email_from.lower().replace('&#60;', '').replace('&#62;', '')
+
+            # Try to find the partner using its email from our contacts
+            for email in project_emails:
+                if email[0] in obj.email_from.lower():
+                    email_match = True
+                    email_match_email = email[0]
+                    email_match_partner_id = email[1]
+
+            # Contact not found, try to match on email suffixes
+            if not email_match:
+                for email in project_emails:
+                    if (not email_suffix in generic_email_suffixes) and (email[0].find(email_suffix) > 0):
+                        email_match = True
+                        email_match_email = obj.email_from
+                        email_match_partner_id = obj.partner_id.id
+
+            if email_match:
+                pool['project.issue'].write(cr,uid,obj.id,{'project_id' : project.id})
+                pool['project.issue'].write(cr,uid,obj.id,{'analytic_account_id' : project.analytic_account_id.id})
+                pool['project.issue'].write(cr,uid,obj.id,{'email_from' : email_match_email})
+                pool['project.issue'].write(cr,uid,obj.id,{'partner_id' : email_match_partner_id})
+                pool['project.issue'].write(cr,uid,obj.id,{'priority' : '1'})
+
+                # Print a message in the description
+                if email_match_partner_id == None:
+                    pool['project.issue'].write(cr,uid,obj.id,{'description' : 'WARNING ! THIS SENDER HAS NO CONTACT LINKED, CREATE ONE PLEASE\nEMAIL: ' + email_match_email})
+                    
+                is_project_found = True
+
+        if is_project_found:
+            break
+if not is_project_found:
+    pool['project.issue'].write(cr,uid,obj.id,{'description' : 'No project found'})
+
+# - Send EMAIL Confirmation
+
+#Project issue - Email matching answer
+email_template_obj = pool['mail.template']
+template_ids = email_template_obj.search(cr, uid, [('name', '=','Project issue - Email matching answer')], context=context) 
+if template_ids:
+    values = email_template_obj.generate_email(cr, uid, template_ids[0], obj.id, context=context)
+    #values['subject'] = subject; values['body_html'] = body_html; values['body'] = body_html
+    values['email_to'] = obj.email_from
+    mail_mail_obj = pool['mail.mail']
+    msg_id = mail_mail_obj.create(cr, uid, values, context=context)
+    if msg_id:
+        mail = mail_mail_obj.browse(cr, uid, msg_id)
+        project_issue_obj = pool['project.issue']
+        issue = project_issue_obj .browse(cr, uid, obj.id)
+        issue.message_post(subject='Matching answer', body=mail.body_html)
+        mail_mail_obj.send(cr, uid, [msg_id], context=context)
+
+# - Alert to SMs
+
+teams = pool['account.analytic.account.team'].search(cr, uid, [('name','=','SM')])
+if teams:
+    team = pool['account.analytic.account.team'].browse(cr, uid, teams[0])
+    for user in team.users:
+        if user.email:
+            email_template_obj = pool['mail.template']
+            template_ids = email_template_obj.search(cr, uid, [('name', '=','Project issue - New issue email to SM')], context=context) 
+            if template_ids:
+                values = email_template_obj.generate_email(cr, uid, template_ids[0], obj.id, context=context)
+                values['email_to'] = user.email
+                mail_mail_obj = pool['mail.mail']
+                msg_id = mail_mail_obj.create(cr, uid, values, context=context)
+                if msg_id:
+                    mail_mail_obj.send(cr, uid, [msg_id], context=context)
+ 
+            </field>
+        </record>
+    </data>
+</openerp>

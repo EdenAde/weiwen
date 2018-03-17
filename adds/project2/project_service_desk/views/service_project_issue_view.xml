@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- My Tickets -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_tickets_my">
+            <field name="name">My Open Tickets</field>
+            <field name="res_model">project.issue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="['|', ('stage_id.closed', '=', False), ('stage_id', '=', False), '|', ('project_id', '=', False), '|', ('project_id.privacy_visibility', '!=', 'followers'), '&amp;', ('project_id.privacy_visibility', '=', 'followers'), ('project_id.message_is_follower', '=', True)]"/>
+            <field name="context">{'search_default_my':1}</field>
+            <field name="search_view_id" ref="project_issue_improvements.view_project_issue_filter1"/>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- Unassigned Tickets -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_tickets_unassigned">
+            <field name="name">Unassigned Tickets</field>
+            <field name="res_model">project.issue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="['|', ('stage_id.closed', '=', False), ('stage_id', '=', False), '|', ('project_id', '=', False), '|', ('project_id.privacy_visibility', '!=', 'followers'), '&amp;', ('project_id.privacy_visibility', '=', 'followers'), ('project_id.message_is_follower', '=', True)]"/>
+            <field name="context">{"search_default_unassigned":1}</field>
+            <field name="search_view_id" ref="project_issue_improvements.view_project_issue_filter1"/>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- Open Tickets -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_tickets_open">
+            <field name="name">Open Tickets</field>
+            <field name="res_model">project.issue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="['|', ('stage_id.closed', '=', False), ('stage_id', '=', False), '|', ('project_id', '=', False), '|', ('project_id.privacy_visibility', '!=', 'followers'), '&amp;', ('project_id.privacy_visibility', '=', 'followers'), ('project_id.message_is_follower', '=', True)]"/>
+            <field name="context">{'search_default_Current': 1}</field>
+            <field name="search_view_id" ref="project_issue_improvements.view_project_issue_filter1"/>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- Closed Tickets -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_tickets_closed">
+            <field name="name">Closed Tickets</field>
+            <field name="res_model">project.issue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="[('stage_id.closed', '=', True), '|', ('project_id.privacy_visibility', '!=', 'followers'), '&amp;', ('project_id.privacy_visibility', '=', 'followers'), ('project_id.message_is_follower', '=', True)]"/>
+            <field name="context">{'search_default_Current': 1}</field>
+            <field name="search_view_id" ref="project_issue_improvements.view_project_issue_filter1"/>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- All Tickets -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_tickets_all">
+            <field name="name">All Tickets</field>
+            <field name="res_model">project.issue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="['|', ('project_id.privacy_visibility', '!=', 'followers'), '&amp;', ('project_id.privacy_visibility', '=', 'followers'), ('project_id.message_is_follower', '=', True)]"/>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="project_issue_improvements.view_project_issue_filter1"/>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- Search Tickets -->
+        <record model="ir.ui.view" id="project_issue_search_service_desk">
+           <field name="name">project_issue_search_support_project</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue_improvements.view_project_issue_filter1"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='unassigned']" position="after">
+                    <separator/>
+                    <filter string="Support Tickets" name="support_tickets" domain="[('project_id.project_type', '=', 'support')]" />
+                    <filter string="Development Tickets" name="development_tickets" domain="[('project_id.project_type', '=', 'development')]" />
+                    <filter string="Installation Tickets" name="installation_tickets" domain="[('project_id.project_type', '=', 'installation')]" />
+                    <filter string="Internal Tickets" name="internal_tickets" domain="[('project_id.project_type', '=', 'internal')]" />
+                    <filter string="Other Tickets" name="other_tickets" domain="[('project_id.project_type', '=', 'other')]" />
+                    <separator/>
+                </xpath>
+                <xpath expr="//group" position="inside">
+                    <separator/>
+                    <filter string="Project Type" context="{'group_by':'project_type'}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem name="Tickets"
+            id="project_service_desk.menu_tickets"
+            groups="project.group_project_manager,project.group_project_user"
+            parent="project_service_desk.menu_main_service_desk"
+            sequence="5"/>
+
+        <menuitem name="My Tickets"
+            id="project_service_desk.menu_tickets_my"
+            groups="project.group_project_manager,project.group_project_user"
+            parent="project_service_desk.menu_tickets"
+            action="project_service_desk.act_tickets_my"
+            sequence="5"/>
+
+        <menuitem name="Unassigned Tickets"
+            id="project_service_desk.menu_tickets_unassigned"
+            groups="project.group_project_manager,project.group_project_user"
+            parent="project_service_desk.menu_tickets"
+            action="project_service_desk.act_tickets_unassigned"
+            sequence="10"/>
+
+        <menuitem name="Open Tickets"
+            id="project_service_desk.menu_tickets_open"
+            groups="project.group_project_manager,project.group_project_user"
+            parent="project_service_desk.menu_tickets"
+            action="project_service_desk.act_tickets_open"
+            sequence="15"/>
+
+        <menuitem name="Closed Tickets"
+            id="project_service_desk.menu_tickets_closed"
+            groups="project.group_project_manager,project.group_project_user"
+            parent="project_service_desk.menu_tickets"
+            action="project_service_desk.act_tickets_closed"
+            sequence="20"/>
+
+        <menuitem name="All Tickets"
+            id="project_service_desk.menu_tickets_all"
+            groups="project.group_project_manager,project.group_project_user"
+            parent="project_service_desk.menu_tickets"
+            action="project_service_desk.act_tickets_all"
+            sequence="25"/>
+    </data>
+</openerp>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <!--
+        This template is the ribbon at the top of the salesteam dashboard that adds
+        some figures to it. We call this rubbon the "SalesDashboard".
+    -->
+    <t t-name="pos_library.update_batch">
+        <div class="o_library_dashboard">
+                    <t t-if="target_vals">
+                        <select name="update_value_select" id="update_value_selection" class="selectpicker show-tick form-control"  data-width="98%" data-first-option="false" title='请选择经销商' required="true" data-live-search="true">
+                         <option>请选择</option>
+                            <t t-foreach="target_vals" t-as="val">
+                             <option t-att-value="val.id" ><t t-esc="val.name"></t></option>
+                         </t>
+                        </select>
+                    </t>
+
+
+
+
+        </div>
+
+    </t>
+</templates>

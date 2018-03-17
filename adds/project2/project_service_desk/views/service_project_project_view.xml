@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Projects Kanban -->
+        <record model="ir.ui.view" id="project_service_desk.projects_kanban_view">
+            <field name="name">project_service_desk.projects_kanban_view</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='o_primary']" position="after">
+                    <div class="o_primary">
+                        <span><t t-esc="record.project_type"/></span>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Projects Form -->
+        <record model="ir.ui.view" id="project_service_desk.project_form_view">
+            <field name="name">project_service_desk.project_form_view</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options_active']" position="after">
+                     <div name="project_info">
+                        <div>
+                            <label for="project_type" class="oe_inline"/>
+                            <field name="project_type" string="Project Type" class="oe_inline"/>
+                         </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- My Projects -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_projects_my">
+            <field name="name">My Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="[('state', '=', 'open'), ('message_is_follower', '=', True), '|', ('privacy_visibility', '!=', 'followers'), '&amp;', ('privacy_visibility', '=', 'followers'), ('message_is_follower', '=', True)]"/>
+            <field name="context">{"search_default_my":1}</field>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- Support Projects -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_projects_support">
+            <field name="name">Support Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="[('state', '=', 'open'), ('project_type', '=', 'support'), '|', ('privacy_visibility', '!=', 'followers'), '&amp;', ('privacy_visibility', '=', 'followers'), ('message_is_follower', '=', True)]"/>
+            <field name="context">{'default_project_type': 'support'}</field>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- Installation Projects -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_projects_installation">
+            <field name="name">Installation Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="[('state', '=', 'open'), ('project_type', '=', 'installation'), '|', ('privacy_visibility', '!=', 'followers'), '&amp;', ('privacy_visibility', '=', 'followers'), ('message_is_follower', '=', True)]"/>
+            <field name="context">{'default_project_type': 'installation'}</field>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- Internal Projects -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_projects_internal">
+            <field name="name">Internal Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="[('state', '=', 'open'), ('project_type', '=', 'internal'), '|', ('privacy_visibility', '!=', 'followers'), '&amp;', ('privacy_visibility', '=', 'followers'), ('message_is_follower', '=', True)]"/>
+            <field name="context">{'default_project_type': 'internal'}</field>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- Development Projects -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_projects_development">
+            <field name="name">Development Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="[('state', '=', 'open'), ('project_type', '=', 'development'), '|', ('privacy_visibility', '!=', 'followers'), '&amp;', ('privacy_visibility', '=', 'followers'), ('message_is_follower', '=', True)]"/>
+            <field name="context">{'default_project_type': 'development'}</field>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- Other Projects -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_projects_other">
+            <field name="name">Other Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="[('state', '=', 'open'), ('project_type', '=', 'other'), '|', ('privacy_visibility', '!=', 'followers'), '&amp;', ('privacy_visibility', '=', 'followers'), ('message_is_follower', '=', True)]"/>
+            <field name="context">{'default_project_type': 'other'}</field>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <!-- All Projects -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_projects_all">
+            <field name="name">All Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="['|', ('privacy_visibility', '!=', 'followers'), '&amp;', ('privacy_visibility', '=', 'followers'), ('message_is_follower', '=', True)]"/>
+            <field name="context">{'search_default_Current': 1}</field>
+            <field name="help" type="html">
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Projects"
+                  id="project_service_desk.menu_projects"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_main_service_desk"
+                  sequence="20"/>
+
+        <menuitem name="My"
+                  id="project_service_desk.menu_projects_my"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_projects"
+                  action="project_service_desk.act_projects_my"
+                  sequence="10"/>
+        
+        <menuitem name="Support"
+                  id="project_service_desk.menu_projects_support"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_projects"
+                  action="project_service_desk.act_projects_support"
+                  sequence="10"/>
+
+        <menuitem name="Installation"
+                  id="project_service_desk.menu_projects_installation"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_projects"
+                  action="project_service_desk.act_projects_installation"
+                  sequence="15"/>
+
+        <menuitem name="Internal"
+                  id="project_service_desk.menu_projects_internal"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_projects"
+                  action="project_service_desk.act_projects_internal"
+                  sequence="20"/>
+
+        <menuitem name="Development"
+                  id="project_service_desk.menu_projects_development"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_projects"
+                  action="project_service_desk.act_projects_development"
+                  sequence="25"/>
+
+        <menuitem name="Others"
+                  id="project_service_desk.menu_projects_others"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_projects"
+                  action="project_service_desk.act_projects_other"
+                  sequence="30"/>
+
+        <menuitem name="All"
+                  id="project_service_desk.menu_projects_all"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_projects"
+                  action="project_service_desk.act_projects_all"
+                  sequence="35"/>
+    </data>
+</openerp>

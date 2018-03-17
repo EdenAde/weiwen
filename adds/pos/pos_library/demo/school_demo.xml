@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="1">
+        <!--  School Information -->
+        <record id="demo_card_type_1" model="card.type">
+            <field name="name">hyq_default_card_type</field>
+            <field name="book_limit">5</field>
+            <field name="day_limit">7</field>
+             <field name="book_day_rent">0</field>
+             <field name="overdur_rent">0</field>
+        </record>
+
+    </data>
+</odoo>

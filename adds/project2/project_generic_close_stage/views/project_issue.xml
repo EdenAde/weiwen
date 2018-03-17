@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Form -->
+        <record model="ir.ui.view" id="project.view_issue_form_generic_close">
+            <field name="name">view_issue_form_generic_close</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//header" position="inside">
+                        <field name="is_closed" invisible="1" />
+                        <button name="action_open" string="Open Issue" type="object" attrs="{'invisible': ['|', ('project_id', '!=', False), ('is_closed', '=', False)]}" />
+                        <button class="btn-primary" name="action_close" string="Close Issue" type="object" attrs="{'invisible': ['|', ('project_id', '!=', False), ('is_closed', '=', True)]}" />
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</openerp>

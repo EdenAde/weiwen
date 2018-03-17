@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+        <record model="ir.ui.view" id="project_issue_project">
+            <field name="name">project.issue.reorganise</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
+            <field name="arch" type="xml">
+
+                <!-- Reorganize the other fields -->
+                <field name="priority" position="replace" />
+                <field name="user_id" position="after">
+                    <field name="priority" />
+                    <field name="due_date" />
+                </field>
+                
+                <field name="id" position="replace" />
+
+                <xpath expr="//form/sheet/group/group[2]" position="replace">
+                    <group>
+                        <field name="id" />
+                        <field name="task_id" on_change="onchange_task_id(task_id)" context="{'default_project_id':project_id}"/>
+                    </group>
+                </xpath>
+            
+                <!-- Move the project field to the first position + contact name + email -->
+                <xpath expr="//sheet/div[@class='oe_title']" position="replace">
+                    <group id="global_info">
+                        <group>
+                            <field name="project_id" domain="[('state','not in', ('close', 'cancelled'))]" on_change="on_change_project(project_id)" context="{'default_use_issues':1}"/>
+                        </group>
+                        <group>
+                            <field name="partner_id" on_change="onchange_partner_id(partner_id)"/>
+                            <field name="email_from" />
+                        </group>
+                    </group>
+                    <label for="name" string="Issue title" />
+                    <h2><field name="name" /></h2>
+                    <hr />
+                </xpath>
+
+                <!-- Adds the custommer feedback -->
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Customer Feedback">
+                        <field name="customer_feedback"/>
+                    </page>
+                </xpath>
+
+                <!-- Conversion to task stuff -->
+                <field name="stage_id" position="after">
+                    <button name="convert_to_task" type="object" class="oe_highlight" string="Convert to Task" attrs="{'invisible':[('task_id', '!=', False)]}"/>
+                </field>
+                <field name="task_id" position="after">
+                    <field name="converted_task_state" attrs="{'invisible':[('task_id', '=', 'None')]}" />
+                </field>
+		    </field>
+        </record>
+        
+        <!-- Delete the current Issue menuitem -->
+        <delete id="project_issue.menu_project_issue_track" model="ir.ui.menu"/>
+        
+        <!-- Add the name "my" in My Issues filter to set it as default later -->
+        <record id="view_project_issue_filter1" model="ir.ui.view">
+                <field name="name">Project Issue Tracker Search1</field>
+                <field name="model">project.issue</field>
+                <field name="arch" type="xml">
+                    <search string="Issue Tracker Search">
+                        <field name="name" string="Issue" filter_domain="['|', '|', '|', ('partner_id','child_of',self), ('description','ilike',self),('email_from','ilike',self),('name','ilike',self)]"/>
+                        <field name="id"/>
+                        <field name="partner_id" operator="child_of"/>
+                        <field name="user_id"/>
+                        <field name="project_id"/>
+                        <field name="tag_ids"/>
+                        <field name="stage_id" domain="[]"/>
+                        <filter string="My Issues" name="my" domain="[('user_id','=',uid)]"/>
+                        <filter string="Unassigned" name="unassigned" domain="[('user_id', '=', False)]"/>
+                        <separator/>
+                        <filter string="New" name="draft" domain="[('stage_id.sequence', '=', 1)]"/>
+                        <separator/>
+                        <filter string="New Mail" name="message_unread" domain="[('message_unread','=',True)]"/>
+                        <group expand="0" string="Group By" >
+                            <filter string="Assigned to" name="Responsible" context="{'group_by':'user_id'}" />
+                            <filter string="Project" name="project" context="{'group_by':'project_id'}" />
+                            <filter string="Task" context="{'group_by':'task_id'}"/>
+                            <filter string="Priority" context="{'group_by':'priority'}" />
+                            <filter string="Stage" context="{'group_by':'stage_id'}"/>
+                            <filter string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                            <separator/>
+                            <filter string="Create Day" context="{'group_by':'create_date:day'}" help="Create Date"/>
+                            <filter string="Last Message" name="group_message_last_post" context="{'group_by':'message_last_post:week'}"/>
+                        </group>
+                    </search>
+                </field>
+            </record>
+            
+        <!-- Add the my Issues menueitem and default filter -->
+        <record model="ir.actions.act_window" id="project_issue_categ_act1">
+            <field name="name">Issues</field>
+            <field name="res_model">project.issue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval=""/>
+            <field name="context">{"search_default_my":1}</field>
+            <field name="search_view_id" ref="view_project_issue_filter1"/>
+            <field name="help" type="html">
+                <p>
+                    The Odoo issues tacker allows you to efficiantly manage things
+                    like internal requests, software development bugs, customer
+                    complaints, project troubles, material breakdowns, etc.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_kanban_view1">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="project_issue.project_issue_kanban_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act1"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_tree_view1">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="project_issue.project_issue_tree_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act1"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_calendar_view1">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="project_issue.project_issue_calendar_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act1"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_form_view1">
+            <field name="sequence" eval="3"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="project_issue.project_issue_form_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act1"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_graph_view1">
+            <field name="sequence" eval="4"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="project_issue.project_issue_graph_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act1"/>
+        </record>
+
+        <menuitem name="My Issues" id="menu_project_issue_track1"  parent="project.menu_project_management"
+                action="project_issue_categ_act1" sequence="15"/>
+           
+        <!-- Add the unassigned Issues menueitem and default filter-->
+        <record model="ir.actions.act_window" id="project_issue_categ_act2">
+            <field name="name">Unassigned Issues</field>
+            <field name="res_model">project.issue</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,calendar,form,graph</field>
+            <field name="view_id" eval="False"/>
+            <field name="domain" eval="[('stage_id', '!=', 'Closed'), ('stage_id', '!=', 'Done'), ('stage_id', '!=', 'Cancelled')]"/>
+            <field name="context">{"search_default_unassigned":1}</field>
+            <field name="search_view_id" ref="view_project_issue_filter1"/>
+            <field name="help" type="html">
+                <p>
+                    The Odoo issues tacker allows you to efficiantly manage things
+                    like internal requests, software development bugs, customer
+                    complaints, project troubles, material breakdowns, etc.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_kanban_view2">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="project_issue.project_issue_kanban_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act2"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_tree_view2">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="project_issue.project_issue_tree_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act2"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_calendar_view2">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="project_issue.project_issue_calendar_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act2"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_form_view2">
+            <field name="sequence" eval="3"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="project_issue.project_issue_form_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act2"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_crm_tag_graph_view2">
+            <field name="sequence" eval="4"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="project_issue.project_issue_graph_view"/>
+            <field name="act_window_id" ref="project_issue_categ_act2"/>
+        </record>
+
+        <menuitem name="Unassigned Issues" id="menu_project_issue_track2"  parent="project.menu_project_management"
+                action="project_issue_categ_act2" sequence="15"/> 
+    
+        <!-- It removes the stars of priority in the kanban view -->
+        <record model="ir.ui.view" id="project_issue_change_priority_view">
+            <field name="name">project.issue.change.priority</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="(//field[@name='priority'])" position="replace"/>
+                <xpath expr="(//field[@name='user_id'])" position="after">
+                    <field name="priority" groups="base.group_user"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="project_issue_change_priority_kanban_view">
+            <field name="name">project.issue.change.priority.kanban</field>
+            <field name="model">project.issue</field>
+            <field name="inherit_id" ref="project_issue.project_issue_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="(//div/div/field[@name='priority'])" position="replace"/>
+                <xpath expr="(//div/div/field[@name='kanban_state'])" position="after">
+                    <field name="priority"/>
+                </xpath>
+            </field>
+        </record>
+	</data>
+</openerp>

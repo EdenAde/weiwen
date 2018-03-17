@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="list">
+			<meta charset="utf-8"/>
+
+			<t t-call="website.layout">
+
+				<t t-foreach="partner" t-as="p">
+					<div class="col-xs-3">
+						<img class="img-responsive" t-attf-src="data:image/*;base64,#{p.image}" />
+                    <h1>
+                        <span t-field="p.name"/><br/>
+                    </h1>
+					<p>
+						
+						<span t-field="p.street"/><br/>
+						<span t-field="p.phone"/><br/>
+
+					</p></div>
+				</t>
+			</t>
+		</template>
+	</data>
+</odoo>

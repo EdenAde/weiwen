@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+        <record model="ir.ui.view" id="project__new_fields_form">
+           <field name="name">project_new_fields_form</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="before">
+                    <field name="project_description" placeholder="Write here the description of the project ..."/>
+                </xpath>
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Attachments">
+                        <field name="attachments_ids" widget="many2many_binary" string="Attach a file"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_list_of_projects">
+            <field name="name">List of projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="project_list_of_projects" name="List of projects" parent="base.menu_main_pm" action="action_list_of_projects"/>
+    </data>
+</openerp>

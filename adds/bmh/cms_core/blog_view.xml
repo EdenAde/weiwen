@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Project Tags (Categories) form -->
+        <record id="blog_post_form_view_categs" model="ir.ui.view">
+            <field name="name">blog_form_view_sdesk</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+
+                         <field name="image" widget="image" class="oe_avatar" options='{"preview_image": "image_small"}'/>
+
+                        <field name="sequence"/>
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

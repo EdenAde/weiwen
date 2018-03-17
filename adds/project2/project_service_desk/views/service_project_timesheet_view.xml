@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <!-- My Worklogs Tree -->
+        <record model="ir.ui.view" id="project_service_desk.timesheet_worklogs_tree_view">
+            <field name="name">project_service_desk.timesheet_worklogs_tree_view</field>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date_begin" />
+                    <field name="user_id" />
+                    <field name="account_id" />
+                    <field name="name" />
+                    <field name="unit_amount" />
+                    <field name="to_invoice" />
+                    <field name="on_site" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- My Worklogs Form -->
+        <record model="ir.ui.view" id="project_service_desk.timesheet_worklogs_form_view">
+            <field name="name">project_service_desk.timesheet_worklogs_form_view</field>
+            <field name="model">account.analytic.line</field>
+            <field name="arch" type="xml">
+                <form string="Worklog">
+                    <group>
+                        <group>
+                            <field name="user_id" />
+                        </group>
+                    </group>
+                    <group name="global" col="4">
+                        <field name="account_id" string="Project" domain="[('account_type', '=', 'normal'), ('project_count', '&gt;', 0), ('first_subscription_id.project_id', '!=', 'development'), ('first_subscription_id.project_id', '!=', 'other'), ('first_subscription_id.project_id.state', '=', 'open'), '|', ('use_tasks', '=', True), ('use_issues', '=', True)]" colspan="4"/>
+                        <field name="issue_id" domain="[('analytic_account_id', '=', account_id), ('stage_id.closed', '=', False)]" attrs="{'invisible':[('task_id', '!=', False)]}" context="{'default_analytic_account_id': account_id}" />
+                        <field name="issue_state" attrs="{'invisible':['|', ('issue_id', '=', False), ('task_id', '!=', False)]}"  readonly="True"/>
+                        <field name="task_id" domain="[('analytic_account_id', '=', account_id), ('stage_id.closed', '=', False)]" attrs="{'invisible':[('issue_id', '!=', False)]}" context="{'default_analytic_account_id': account_id}" />
+                        <field name="task_state" attrs="{'invisible':['|', ('task_id', '=', False), ('issue_id', '!=', False)]}" readonly="True"/>
+                        <field name="date_begin" string="Date" colspan="2"/>
+                        <field name="unit_amount" string="Duration" widget="float_time"/>
+                        <field name="on_site"/>
+                        <field name="to_invoice" string="invoicable at"/>
+                    </group>
+                    <group string="Description">
+                        <field name="name" nolabel="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- My Worklogs Calendar -->
+        <record model="ir.actions.act_window" id="project_service_desk.act_timesheet_worklogs_my">
+            <field name="name">Manage Worklogs</field>
+            <field name="res_model">account.analytic.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">calendar,form,tree</field>
+            <field name="domain">[('is_timesheet', '=', True')]</field>
+            <field name="context">{'search_default_my_worklogs': 1, 'default_is_timesheet': 1}</field>
+            <field name="search_view_id" ref="hr_analytic_timesheet_improvements.view_manage_worklogs_filter"/>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                         (0, 0, {'view_mode': 'calendar', 'sequence': 5, 'view_id': ref('hr_analytic_timesheet_improvements.view_manage_worklogs_calendar')}),
+                         (0, 0, {'view_mode': 'tree', 'sequence': 10, 'view_id': ref('project_service_desk.timesheet_worklogs_tree_view')}),
+                         (0, 0, {'view_mode': 'form', 'sequence': 15, 'view_id': ref('project_service_desk.timesheet_worklogs_form_view')}),
+                         ]"
+                   />
+        </record>
+
+        <!-- Search Timesheets -->
+        <record model="ir.ui.view" id="project_timesheets_search_service_desk">
+           <field name="name">project_timesheets_search_service_desk</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="hr_analytic_timesheet_improvements.view_manage_worklogs_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='my_worklogs']" position="after">
+                    <field name="user_id"/>
+                    <field name="account_id"/>
+                    <field name="name"/>
+                    <field name="issue_id"/>
+                    <field name="task_id"/>
+                    <separator/>
+                    <filter string="Support WL" name="support_analytic_lines" domain="['|', ('task_id.project_id.project_type', '=', 'support'), ('issue_id.project_id.project_type', '=', 'support')]" />
+                    <filter string="Development WL" name="development_analytic_lines" domain="['|', ('task_id.project_id.project_type', '=', 'development'), ('issue_id.project_id.project_type', '=', 'development')]" />
+                    <filter string="Installation WL" name="installation_analytic_lines" domain="['|', ('task_id.project_id.project_type', '=', 'installation'), ('issue_id.project_id.project_type', '=', 'installation')]" />
+                    <filter string="Other WL" name="other_tickets" domain="['|', ('task_id.project_id.project_type', '=', 'other'), ('issue_id.project_id.project_type', '=', 'other')]" />
+                    <separator/>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem name="Timesheet"
+                  id="project_service_desk.menu_timesheet"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_main_service_desk"
+                  action="project_service_desk.act_timesheet_worklogs_my"
+                  sequence="15"/>
+
+        <menuitem name="My Worklogss"
+                  id="project_service_desk.menu_timesheet_worklogs_my"
+                  groups="project.group_project_manager,project.group_project_user"
+                  parent="project_service_desk.menu_timesheet"
+                  sequence="5"/>
+    </data>
+</openerp>

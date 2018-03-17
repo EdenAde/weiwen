@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<openerp>
+	<data>
+		<template id="odoo_extension_backend_assets" inherit_id="web.assets_backend" name="ODOO Extension backend assets" priority="30">
+			<xpath expr="." position="inside">
+				<script type="text/javascript" src="/odoo_extension/static/src/js/backend.js"></script>
+				<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=5p5eXetPaNcUD093C59CdsSa"></script>
+
+
+
+
+			</xpath>
+		</template>
+	</data>
+</openerp>

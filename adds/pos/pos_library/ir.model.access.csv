@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_statictics_manager,library.summary,model_library_summary,library.group_librarian,1,1,1,1
+access_book_report_manager,book.report,model_book_report,library.group_librarian,1,1,1,1
+access_library_report_manager,library.report,model_library_report,library.group_librarian,1,1,1,1
+access_library_card_type_manager,card.type,model_card_type,library.group_librarian,1,1,1,1
+access_school_school_division_manager,school.school.division,model_school_school_division,library.group_librarian,1,0,0,0

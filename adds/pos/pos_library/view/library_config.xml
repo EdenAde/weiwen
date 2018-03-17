@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+
+
+
+
+        <record id="wizard_action_import_form" model="ir.actions.act_window">
+            <field name="name">数据迁移</field>
+            <field name="res_model">import.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+
+
+    <record id="wizard_action_import_form_2" model="ir.actions.act_window">
+            <field name="name">数据迁移</field>
+            <field name="res_model">import.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'type':'book_import','import_chain_id': 3}</field>
+    </record>
+
+
+
+
+    <record id="wizard_action_import_form_3" model="ir.actions.act_window">
+            <field name="name">书籍流通导入</field>
+            <field name="res_model">import.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'type':'issue_import','import_chain_id': 2}</field>
+    </record>
+
+
+
+
+
+    <record id="wizard_action_import_form_4" model="ir.actions.act_window">
+            <field name="name">学生读者证导入</field>
+            <field name="res_model">import.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'type':'card_student_import','import_chain_id': 5}</field>
+    </record>
+
+
+
+    <record id="wizard_action_import_form_5" model="ir.actions.act_window">
+            <field name="name">教师读者导入</field>
+            <field name="res_model">import.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'type':'card_teacher_import','import_chain_id': 6}</field>
+    </record>
+
+
+    <record id="wizard_action_import_form_6" model="ir.actions.act_window">
+            <field name="name">分类导入</field>
+            <field name="res_model">import.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{'import_chain_id':7}</field>
+    </record>
+
+
+
+<record id="view_school_users_tree" model="ir.ui.view">
+            <field name="name">res.users.tree</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <tree string="所有用户">
+                    <field name="name"/>
+                    <field name="login"/>
+                    <field name="company_id"/>
+                    <field name="login_date"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="view_school_users_search" model="ir.ui.view">
+            <field name="name">res.users.search</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <search string="Users">
+                    <filter name="is_student" string="学生用户" domain="[('is_student','=',True),('id','!=',uid)]"/>
+                    <filter name="is_teacher" string="老师用户" domain="[('is_student','=',False),('id','!=',uid)]"/>
+                </search>
+            </field>
+    </record>
+
+    <record id="action_school_res_users" model="ir.actions.act_window">
+            <field name="name">Users</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.users</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_school_users_tree"/>
+            <field name="search_view_id" ref="view_school_users_search"/>
+            <field name="context">{'search_default_is_student': 1,'myschool':1}</field>
+            <field name="help"></field>
+    </record>
+
+
+
+
+
+    <menuitem id="menu_library_import_config" name="数据迁移" parent="school.menu_configuration" sequence="8"  />
+
+
+
+
+
+     <menuitem id="menu_book_batch_import" name="书籍导入" parent="pos_library.menu_library_import_config"
+                  action="wizard_action_import_form_2" groups="school.group_school_administration" sequence="2"/>
+
+
+
+
+    <menuitem id="menu_book_issue_batch_import" name="书籍流通导入" parent="pos_library.menu_library_import_config"
+                  action="wizard_action_import_form_3" groups="school.group_school_administration" sequence="3"/>
+
+
+
+    <menuitem id="menu_student_card_batch_import" name="学生读者导入" parent="pos_library.menu_library_import_config" action="wizard_action_import_form_4"  sequence="6"/>
+
+
+
+    <menuitem id="menu_teacher_card_batch_import" name="教师读者导入" parent="pos_library.menu_library_import_config"
+                  action="wizard_action_import_form_5"  sequence="5"/>
+
+
+
+
+    <menuitem id="menu_categ_import" name="分类导入" parent="pos_library.menu_library_import_config"
+                  action="wizard_action_import_form_6"  sequence="5"/>
+
+
+
+    <act_window id="action_student_import" res_model="import.wizard" src_model="school.standard" target="new" multi="False" key2="client_action_multi" view_mode="form" name="学生导入" context="{'import_chain_id': 1,'default_standard_id': active_id,}"/>
+
+    <act_window id="action_class_import" res_model="import.wizard" src_model="school.school" target="new" multi="False" key2="client_action_multi" view_mode="form" name="班级导入" context="{'import_chain_id': 4,'default_school_id': active_id,}"/>
+
+
+
+    <menuitem id="menu_school_user_config" action="action_school_res_users" name="用户管理" parent="school.menu_configuration" sequence="9" groups="school.group_school_administration" />
+
+
+
+
+
+</odoo>

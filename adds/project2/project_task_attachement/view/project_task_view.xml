@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="view_hr_holidays_attachments">
+			<field name="name">project.task.attachments</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="project.view_task_form2"/>
+			<field name="arch" type="xml">
+				<!-- Attachments -->
+				<page position="after">
+					<page string="Attachments">
+						<field name="attachments_ids" widget="many2many_binary" string="Attach a file"/>
+					</page>
+				</page>
+			</field>
+		</record>
+	</data>
+</openerp>

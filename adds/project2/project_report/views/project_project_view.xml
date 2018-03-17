@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+        <act_window id="project_report_wizard_action"
+            name="Print Project Report"
+            src_model="project.project"
+            res_model="project.report.wizard"
+            view_type="form" view_mode="form"
+            key2="client_action_multi" target="new"/>
+
+        <record model="ir.ui.view" id="project_kanban_project_report">
+            <field name="name">project_kanban_project_report</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//a[@class='o_kanban_manage_toggle_button']" position="after">
+                    <button name="%(project_report_wizard_action)d"
+                            class="btn btn-primary"
+                            type="action"
+                            groups="project.group_project_manager">
+                        Print Report
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="project_form_project_report">
+            <field name="name">project_form_project_report</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="%(project_report_wizard_action)d"
+                            class="oe_highlight"
+                            type="action"
+                            groups="project.group_project_manager"
+                            string="Print Report" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

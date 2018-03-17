@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <!--
+        This template is the ribbon at the top of the salesteam dashboard that adds
+        some figures to it. We call this rubbon the "SalesDashboard".
+    -->
+    <t t-name="pos_library.Dashboard.Today">
+        <div t-if="values" class="o_library_dashboard">
+            <div t-attf-class="#{show_demo ? 'o_demo' : ''}">
+                <table class="table table-condensed">
+                    <tr>
+                        <td class="o_text">
+                        </td>
+                        <td class="o_main" title="To Calendar">
+                            <a href="#"  class="o_dashboard_action" name="library.action_product_book_list">
+                                <span class="o_highlight">
+                                    <t t-esc="values['today_book_issue']"/>
+                                </span><br/>
+                                入库书籍
+                            </a>
+                        </td>
+                        <td class="o_main" title="To Activities">
+                            <a href="#" class="o_dashboard_action" name="" data-extra="today">
+                                <span class="o_highlight">
+                                   0
+                                </span> <br/>
+                                入库期刊
+                            </a>
+                        </td>
+                        <td class="o_main" title="My Pipeline" >
+                            <a href="#" class="o_dashboard_action" name="school.action_student_student_form_12">
+                                 <span class="o_highlight">
+                                   <t t-esc="values['today_student']"/>
+                                </span> <br/>
+                                办证读者
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="o_text">
+
+
+                        </td>
+                        <td class="o_main" title="To Calendar">
+                            <a href="#" class="o_dashboard_action" name="library.action_library_book_list11" data-extra="borrow">
+                                <span class="o_highlight">
+                                     <t t-esc="values['today_bowwor']"/>
+                                </span><br/>
+                                借出书籍
+                            </a>
+                        </td>
+                        <td class="o_main" title="To Activities">
+                            <a href="#" class="o_dashboard_action" name="library.action_library_book_list11" data-extra="return">
+                                <span class="o_highlight">
+                                   <t t-esc="values['today_return']"/>
+                                </span> <br/>
+                                归还书籍
+                            </a>
+                        </td>
+                        <td class="o_main" title="My Pipeline" >
+                            <a href="#" class="o_dashboard_action" name="">
+                                <span class="o_highlight">
+                                 0
+                                </span> <br/>
+                                <br/>
+                                借出期刊
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="o_text">
+
+
+                        </td>
+                        <td class="o_main" title="To Calendar">
+                            <a href="#" class="o_dashboard_action" name="">
+                                <span class="o_highlight">
+                                    <span class="o_highlight">
+                                 0
+                                </span> <br/>
+                                </span><br/>
+                                归还期刊
+                            </a>
+                        </td>
+                        <td class="o_main" title="To Activities">
+                            <a href="#" class="o_dashboard_action" name="">
+                                <span class="o_highlight">
+                                    <span class="o_highlight">
+                                0
+                                </span> <br/>
+                                </span> <br/>
+                                超期罚款
+                            </a>
+                        </td>
+                        <td class="o_main" title="My Pipeline" >
+                            <a href="#" class="o_dashboard_action" name="">
+                                <span class="o_highlight">
+                                 0
+                                </span> <br/>
+                                丢失罚款
+                            </a>
+                        </td>
+                    </tr>
+
+
+
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+    </t>
+
+
+    <t t-name="pos_library.Dashboard.History">
+        <div t-attf-class="#{show_demo ? 'o_demo' : ''}">
+                <table class="hidden-xs table table-condensed">
+                    <tr>
+                        <td style="border-top:none" class="o_text">
+
+                            所有
+                        </td>
+                        <td style="border-top:none" t-attf-class="#{values and values['done']['target'] and values['done']['this_month'] >= values['done']['target'] ? 'o_main' : 'o_secondary'}" title="To Activity Report">
+                            <a href="#" class="o_dashboard_action" name="">
+                                <span class="o_highlight">
+                                 &amp;nbsp;&amp;nbsp; <t t-esc="summary.book_amount"/>
+                                </span> <br/>
+                                图书总册数
+                            </a>
+                        </td>
+                        <td style="border-top:none" t-attf-class="#{values and values['won']['target'] and values['won']['this_month'] >= values['won']['target'] ? 'o_main' : 'o_secondary'}" title="To Opportunity Report">
+                            <a href="#" class="o_dashboard_action" name="">
+                                <span class="o_highlight">
+                                  &amp;nbsp;&amp;nbsp; <t t-esc="summary.student_amount"/>
+                                </span> <br/>
+                                读者总人数
+                            </a>
+                        </td>
+                        <td style="border-top:none"  title="To Invoice Report">
+                            <a href="#" class="o_dashboard_action" name="">
+                                <span class="o_highlight">
+                                 &amp;nbsp;&amp;nbsp; <t t-esc="summary.issue_amount"/>
+                                </span> <br/>
+                                总流通次数
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top:none" class="o_text">
+
+
+                        </td>
+                        <td  style="border-top:none" title="To Activity Report">
+                            <a href="#" class="o_dashboard_action" name="">
+                                <span class="o_highlight">
+                                   &amp;nbsp;&amp;nbsp; <t t-esc="summary.student_rate"/>%
+                                </span> <br/>
+                                读者借阅率
+                            </a>
+                        </td>
+
+                         <td   style="border-top:none" title="To Invoice Report">
+                            <a href="#" class="o_dashboard_action" name="">
+
+                                   <span class="o_highlight">
+                                    &amp;nbsp;&amp;nbsp;<t t-esc="summary.book_rate"/>%
+                                </span> <br/>
+                                图书流通率
+                            </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="o_text">
+                            <div class="o_highlight">Performance</div>
+                        </td>
+                        <td t-attf-class="#{values and values['done']['target'] and values['done']['this_month'] >= values['done']['target'] ? 'o_main' : 'o_secondary'}" title="To Activity Report">
+                            <a href="#" class="o_dashboard_action" name="pos_library.action_library_report_school2">
+                                <span class="o_highlight">
+                                  &amp;nbsp;&amp;nbsp; <t t-esc="summary.dis_book"/>
+                                </span> <br/>
+                                总流通册数
+                            </a>
+                        </td>
+                        <td t-attf-class="#{values and values['won']['target'] and values['won']['this_month'] >= values['won']['target'] ? 'o_main' : 'o_secondary'}" title="To Opportunity Report">
+                            <a href="#" class="o_dashboard_action" name="pos_library.action_library_report_school3">
+                                   <span class="o_highlight">
+                                   &amp;nbsp;&amp;nbsp;<t t-esc="summary.dis_reader"/>
+                                </span> <br/>
+
+                                总借阅人数
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+
+
+                </table>
+            </div>
+
+
+    </t>
+</templates>
