@@ -2,10 +2,218 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1da9a0f1-4212-40b7-88c1-4ba47c8bae10" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_596efabbca22869076315d133f2853ce3c07a6d2.sess" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_59c4e7efe5f592e76142d6bc5531303e10bd1046.sess" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/adds/widgets/mobile_sample" afterPath="$PROJECT_DIR$/adds/widgets/mobile_sample" />
+      <change beforePath="$PROJECT_DIR$/ocb.conf" afterPath="$PROJECT_DIR$/ocb.conf" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/03/030d18906240cdb61e066b84ba42118f713405b6" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/03/030d18906240cdb61e066b84ba42118f713405b6" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/06/06607582a7a913b10fcc12e8394759418f710e63" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/06/06607582a7a913b10fcc12e8394759418f710e63" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/2c/2ce8804c3f7c77f3e0a30816e831cef7cba8878f" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/2c/2ce8804c3f7c77f3e0a30816e831cef7cba8878f" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/2e/2e5ea26399cc6f6adbdcb0fc175f0663926941a4" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/2e/2e5ea26399cc6f6adbdcb0fc175f0663926941a4" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/49/49b50e8606f3221025d0026e81b6684c6dfc4089" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/49/49b50e8606f3221025d0026e81b6684c6dfc4089" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/4a/4aae2ce450e774e0d0230926973858a94a3283d4" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/4a/4aae2ce450e774e0d0230926973858a94a3283d4" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/4d/4d4dd1744a78045403a03cf5567b6186debde631" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/4d/4d4dd1744a78045403a03cf5567b6186debde631" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/52/5286dd478d5148a0c0e182ff871f30eee6dd909a" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/52/5286dd478d5148a0c0e182ff871f30eee6dd909a" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/56/56f7d7641708e056ed1e914e41d16695219c8d03" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/56/56f7d7641708e056ed1e914e41d16695219c8d03" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/6e/6e6442cd0edeb17b66c5188813e9ee24569190e0" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/6e/6e6442cd0edeb17b66c5188813e9ee24569190e0" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/86/8697af5411bd61649fd582acbbd166276f515ea3" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/86/8697af5411bd61649fd582acbbd166276f515ea3" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/87/87386320b3a095fdc80748f7f70e12e734f7cf30" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/87/87386320b3a095fdc80748f7f70e12e734f7cf30" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/8b/8b26ad1a619aade789b541f0634354e3818a3442" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/8b/8b26ad1a619aade789b541f0634354e3818a3442" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/a6/a6e67d981b5fe6d7efbd91e2ccfdabfea9cda6a6" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/a6/a6e67d981b5fe6d7efbd91e2ccfdabfea9cda6a6" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/a7/a76d8448d5d07cd47566c88209f02c31cb9038cc" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/a7/a76d8448d5d07cd47566c88209f02c31cb9038cc" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/b7/b7de62d8497eb766f0fb39e9df4f5c237abdd29d" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/b7/b7de62d8497eb766f0fb39e9df4f5c237abdd29d" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/c8/c81932e882ab86ef533deeecab7980394c34c471" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/c8/c81932e882ab86ef533deeecab7980394c34c471" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/cf/cf96d1aae2c821025a85d0affa1400838305fecc" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/cf/cf96d1aae2c821025a85d0affa1400838305fecc" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/d4/d429bd4e6a18168a41465d99051923e7f8576baa" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/d4/d429bd4e6a18168a41465d99051923e7f8576baa" />
+      <change beforePath="$PROJECT_DIR$/ocb1/filestore/odoo10t/e2/e2bd8a881a03b1379cff93dd9e17b0af44e2d1b0" afterPath="$PROJECT_DIR$/ocb1/filestore/odoo10t/e2/e2bd8a881a03b1379cff93dd9e17b0af44e2d1b0" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_003029212ee276c1e36ce6b1945ffbef1a93e4e0.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_003029212ee276c1e36ce6b1945ffbef1a93e4e0.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_019a95bd0fe1a0b266650cb8304a30df791c6e8f.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_019a95bd0fe1a0b266650cb8304a30df791c6e8f.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_039ef0ac9cce87bd363c2b37d02b658fff90ebb0.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_039ef0ac9cce87bd363c2b37d02b658fff90ebb0.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_04f560ee709a3896427b231096385f402b3da8e6.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_04f560ee709a3896427b231096385f402b3da8e6.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_054643c4bed15da1f5921f3746d8ef84c511ea8e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_054643c4bed15da1f5921f3746d8ef84c511ea8e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_07485f5e0edaf2f68916f6082b2db51928061f2a.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_07485f5e0edaf2f68916f6082b2db51928061f2a.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_08a29406a92ee04510936d2f872f5e6d1b49aa33.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_08a29406a92ee04510936d2f872f5e6d1b49aa33.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_0bfa9ac21adca10d3fac275e82c2b25b3cf09577.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_0bfa9ac21adca10d3fac275e82c2b25b3cf09577.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_0c1b5ac8e0acf7a141dd30ee6e0a25dfd57c1954.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_0c1b5ac8e0acf7a141dd30ee6e0a25dfd57c1954.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_0fd8bd1293a82ae9dc523c42fd2505925a6ef901.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_0fd8bd1293a82ae9dc523c42fd2505925a6ef901.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_101f583a4f441b5aef3592756e6058f7207aa3a0.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_101f583a4f441b5aef3592756e6058f7207aa3a0.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_10592743fb317cce5701ac30ad638f054fad0f04.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_10592743fb317cce5701ac30ad638f054fad0f04.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_10d05ccfeeaa87c1df085ef921453536ca268605.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_10d05ccfeeaa87c1df085ef921453536ca268605.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_146de3536856680868007aff64a556d514ee7167.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_146de3536856680868007aff64a556d514ee7167.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1599cc59c8ea86df284c855c94bfb0386b82c10c.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1599cc59c8ea86df284c855c94bfb0386b82c10c.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_16793250d23407e036afb45ed29c3ef6942ca769.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_16793250d23407e036afb45ed29c3ef6942ca769.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_18040623e71815f59dedc60dff79a84a614ee763.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_18040623e71815f59dedc60dff79a84a614ee763.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1831fc3687606d6d77f705c22583d9c56cb0ebc0.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1831fc3687606d6d77f705c22583d9c56cb0ebc0.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_18abe3fb04aea1e9ddd6a47ca7f0f4f99f5582dd.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_18abe3fb04aea1e9ddd6a47ca7f0f4f99f5582dd.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1962a62061b2a11ea2135366ba72749549b4e172.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1962a62061b2a11ea2135366ba72749549b4e172.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1993a3db66cf805dcdb04503e89cf70f9b27ccc3.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1993a3db66cf805dcdb04503e89cf70f9b27ccc3.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1a2776783b6aa38e4a1c6cd0f85deee16d166564.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1a2776783b6aa38e4a1c6cd0f85deee16d166564.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1e0e287d99f5fb3c31748fe17a777a4c3916ce2a.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_1e0e287d99f5fb3c31748fe17a777a4c3916ce2a.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_205e2d3b5c214a3df9b7ba1b1abb20ab0b6c5706.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_205e2d3b5c214a3df9b7ba1b1abb20ab0b6c5706.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_283c675ba7e41b793d721742e000bd86325128be.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_283c675ba7e41b793d721742e000bd86325128be.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_28b2588a3fee2acf916132462e2a2fc5995546f9.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_28b2588a3fee2acf916132462e2a2fc5995546f9.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_293e9058b1ab04a2cb845821f93fb34b26f28283.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_293e9058b1ab04a2cb845821f93fb34b26f28283.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_299f109473ce99c9f85c4ff4ee9b3da84dd7c45c.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_299f109473ce99c9f85c4ff4ee9b3da84dd7c45c.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2b2dbb1cb94116a3f2d70c29eff4687400bc2a87.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2b2dbb1cb94116a3f2d70c29eff4687400bc2a87.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2b7e555a32a59a7b6ba4cbf0518b5126c0533542.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2b7e555a32a59a7b6ba4cbf0518b5126c0533542.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2d3733e124dcec584dd040b36c8c75c061c87269.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2d3733e124dcec584dd040b36c8c75c061c87269.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2dd852324ab3500511ed581a1357da0ba79b949d.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2dd852324ab3500511ed581a1357da0ba79b949d.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2eb8263d1034ccbf173bd064acc7b629c609bd60.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2eb8263d1034ccbf173bd064acc7b629c609bd60.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2ee9e8c4fa2f5ba649dcf3ce2d4e32ad857d366e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_2ee9e8c4fa2f5ba649dcf3ce2d4e32ad857d366e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_30169f591ce1f1d7dcad93b1a31c68e39fbc5d03.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_30169f591ce1f1d7dcad93b1a31c68e39fbc5d03.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_30654978c00239151e45d6dc0b22ba3b29da96bf.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_30654978c00239151e45d6dc0b22ba3b29da96bf.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_36246198c9b2ef6e3c24eb3522f015d64e34d85c.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_36246198c9b2ef6e3c24eb3522f015d64e34d85c.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3753ba6833cd77fe143b63553ad243521ff8c09e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3753ba6833cd77fe143b63553ad243521ff8c09e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_37aaf8b478a0bca1982b5ff9fb50ef97be616550.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_37aaf8b478a0bca1982b5ff9fb50ef97be616550.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_37bc679e08201ee1347c3e0df618cbbf890ee819.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_37bc679e08201ee1347c3e0df618cbbf890ee819.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_386119d4141960dc2be6d14a3b32d775c086fe4f.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_386119d4141960dc2be6d14a3b32d775c086fe4f.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3cfe20ede1e1edc699b8c652a8332fd71c8a7cda.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3cfe20ede1e1edc699b8c652a8332fd71c8a7cda.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3dad36da63f5f3cdb8a49072253708ef308377ea.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3dad36da63f5f3cdb8a49072253708ef308377ea.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3ef78cd280cbc465de765deb0bc790f68f44d94f.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3ef78cd280cbc465de765deb0bc790f68f44d94f.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3f5481a1ca873007ed1d7252b338b0fbbff5ed92.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3f5481a1ca873007ed1d7252b338b0fbbff5ed92.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3f6b4e5f1f1e65d3ecf9fce4e95816524aec8983.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3f6b4e5f1f1e65d3ecf9fce4e95816524aec8983.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3fc20870d3ce2678414dde4f2dcf13a08df70f2e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_3fc20870d3ce2678414dde4f2dcf13a08df70f2e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_411ddff276820a0749c5cc3b0ab2c781a1b9fd74.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_411ddff276820a0749c5cc3b0ab2c781a1b9fd74.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_42466e1ed812566f7d3bea614e324ae05397b374.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_42466e1ed812566f7d3bea614e324ae05397b374.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_42d5bcbe18837dc48db80807e574905cfa573177.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_42d5bcbe18837dc48db80807e574905cfa573177.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_43a3fd1574d127c42b44a9b223640cb9a1210bc7.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_43a3fd1574d127c42b44a9b223640cb9a1210bc7.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_468af779c429f2a11f8e78d1ac80b00b381392fe.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_468af779c429f2a11f8e78d1ac80b00b381392fe.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_49ac83552fb0ec3d48447fc2256a60eb96fa82d6.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_49ac83552fb0ec3d48447fc2256a60eb96fa82d6.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_49b6a1016d2ee0dce6afeea99e31484c5511c2a7.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_49b6a1016d2ee0dce6afeea99e31484c5511c2a7.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4a17be44f34566bfb98cfc2e46b2d9c791a3a08c.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4a17be44f34566bfb98cfc2e46b2d9c791a3a08c.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4af38a81849a5541e04dbda7409a637193c4b347.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4af38a81849a5541e04dbda7409a637193c4b347.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4ccccd054eeb41e169f5fa57f50a8ed4d445632a.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4ccccd054eeb41e169f5fa57f50a8ed4d445632a.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4e6c023791b5c41b72a492bf7dda460902ee5539.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4e6c023791b5c41b72a492bf7dda460902ee5539.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4f6496191681f97d732d9c946d263ec599a1dc85.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_4f6496191681f97d732d9c946d263ec599a1dc85.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_52d353fb665c31a5223a4d5a1a5a7df75c8b512e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_52d353fb665c31a5223a4d5a1a5a7df75c8b512e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_57916398c490e67ccd321d69348aaa72e93b61d5.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_57916398c490e67ccd321d69348aaa72e93b61d5.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_57b39fe183b154105fc445c96b4fc02cae3f582c.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_57b39fe183b154105fc445c96b4fc02cae3f582c.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_587889e135c3a059b39003ac683041f36c44b92e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_587889e135c3a059b39003ac683041f36c44b92e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5958b6a9e221333d23c94a7036474d006111135b.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5958b6a9e221333d23c94a7036474d006111135b.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_596efabbca22869076315d133f2853ce3c07a6d2.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_596efabbca22869076315d133f2853ce3c07a6d2.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_59c4e7efe5f592e76142d6bc5531303e10bd1046.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_59c4e7efe5f592e76142d6bc5531303e10bd1046.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5a747cdae62877bfde23f5cfc1e493b44a1393fe.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5a747cdae62877bfde23f5cfc1e493b44a1393fe.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5addd6556ee7cbe83f1b7c3e4df46798b4000f57.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5addd6556ee7cbe83f1b7c3e4df46798b4000f57.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5e427ebe94f8236da46fe62f7221384a0df2efa4.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5e427ebe94f8236da46fe62f7221384a0df2efa4.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5e772500039617fb220553927e732e5a1c1bbed8.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5e772500039617fb220553927e732e5a1c1bbed8.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5e869f344944f2db8263029ab9a7a118cb6644ac.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5e869f344944f2db8263029ab9a7a118cb6644ac.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5f5e2767318eb7877488390fbe2d5834fda53301.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5f5e2767318eb7877488390fbe2d5834fda53301.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5f7783af0ca5a1c42a4d88999837ad4bb75605b2.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_5f7783af0ca5a1c42a4d88999837ad4bb75605b2.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_642f1181d43d20ae197a49b2e7917374e778e097.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_642f1181d43d20ae197a49b2e7917374e778e097.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_649611b888ea5ade109fe0376d460d9679add363.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_649611b888ea5ade109fe0376d460d9679add363.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_65baebaffd91c343c5ea94ad9e69c1171b21fc99.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_65baebaffd91c343c5ea94ad9e69c1171b21fc99.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_65d5a34ea326c839e4d69180e4babf0b70ce1350.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_65d5a34ea326c839e4d69180e4babf0b70ce1350.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_65fd5cc8b4d8378a00e97cef0ebcf0a66c49f41d.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_65fd5cc8b4d8378a00e97cef0ebcf0a66c49f41d.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_66e281edc84e24b6fb37cdb0120e5e0170b46404.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_66e281edc84e24b6fb37cdb0120e5e0170b46404.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_67ab8b38acb1716d2118e9b3136be34b5addc0aa.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_67ab8b38acb1716d2118e9b3136be34b5addc0aa.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6890e6b17dc0fb8274e1f078b10bc48534c7f642.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6890e6b17dc0fb8274e1f078b10bc48534c7f642.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6ad438f6cc8617024695d72f6cd155c23e93caeb.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6ad438f6cc8617024695d72f6cd155c23e93caeb.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6bdc018b11b3d922d24e3a223280974af1eb16a8.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6bdc018b11b3d922d24e3a223280974af1eb16a8.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6df114b256c88ebcbbdaf2f9cb6d6ec16de72808.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6df114b256c88ebcbbdaf2f9cb6d6ec16de72808.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6e9e0577a5a2472db87a6cee53ff47e74f92131e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6e9e0577a5a2472db87a6cee53ff47e74f92131e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6fd42621d419763c0f446eca66927fb9d229d901.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_6fd42621d419763c0f446eca66927fb9d229d901.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_70973fc1ac3d1c760200114d778ce6e1af4ed2de.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_70973fc1ac3d1c760200114d778ce6e1af4ed2de.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_74f18696c1f1e394e4dc570d7062e348f90ef4e8.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_74f18696c1f1e394e4dc570d7062e348f90ef4e8.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_76054cfd4b704d947c847c91583b15ad86ada8e4.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_76054cfd4b704d947c847c91583b15ad86ada8e4.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7a6272374589660ffbd59532aca916c925b81733.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7a6272374589660ffbd59532aca916c925b81733.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7c1d8fadd1a0f7f9d7be095277075d7c72b481ad.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7c1d8fadd1a0f7f9d7be095277075d7c72b481ad.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7c2d7e00d1d5ad27ad375c3a31baebb7acf54fa9.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7c2d7e00d1d5ad27ad375c3a31baebb7acf54fa9.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7ca296a2710264f0ed9383d46197cacae1d14b24.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7ca296a2710264f0ed9383d46197cacae1d14b24.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7ce5648122c72136a82895e8eb2dde01ed447f97.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7ce5648122c72136a82895e8eb2dde01ed447f97.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7ece86cdfd6513b834badb64cd7560cc85db7d76.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_7ece86cdfd6513b834badb64cd7560cc85db7d76.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_810eee1c02551b6490944c16002794dbacc235f3.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_810eee1c02551b6490944c16002794dbacc235f3.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_84de44f0bbd4db54025bc323884b3ac23ba58a19.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_84de44f0bbd4db54025bc323884b3ac23ba58a19.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_85b5225748ce42b358ce96a829b4f24126d64a6f.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_85b5225748ce42b358ce96a829b4f24126d64a6f.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_88389f93fb3129df0c4cf9da80eb3ee4895e56c0.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_88389f93fb3129df0c4cf9da80eb3ee4895e56c0.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8856a6ee7910dad4d552017f0b413ba436da7eea.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8856a6ee7910dad4d552017f0b413ba436da7eea.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_88aabfe6890d4f3a7a7a4b925decaf40ac617d0e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_88aabfe6890d4f3a7a7a4b925decaf40ac617d0e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_89948ff12eba49c38b03744ef8c4ac763c54a008.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_89948ff12eba49c38b03744ef8c4ac763c54a008.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8a0fcb8183fdc9e66cffb3fa8e8cc7beba99cfe7.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8a0fcb8183fdc9e66cffb3fa8e8cc7beba99cfe7.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8d7a07c56d3fd73d40bd71616120dcb9a21d2bdf.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8d7a07c56d3fd73d40bd71616120dcb9a21d2bdf.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8ddd2ee9b36fdb6de1a2651de9c9c31ea779c5bb.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8ddd2ee9b36fdb6de1a2651de9c9c31ea779c5bb.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8ef2652ac47746a3f3925cef417f09a4a4d9fd1b.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_8ef2652ac47746a3f3925cef417f09a4a4d9fd1b.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_925a843270b52ab357647031a2ba820a0b22c43c.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_925a843270b52ab357647031a2ba820a0b22c43c.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_92b28945a334070ac8fecf7680bede78012b8b51.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_92b28945a334070ac8fecf7680bede78012b8b51.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_95e86bc72b9a5d742866c27268b619df7869300d.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_95e86bc72b9a5d742866c27268b619df7869300d.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_99af4816dd93862169cdba555d85e1cf4ad63c58.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_99af4816dd93862169cdba555d85e1cf4ad63c58.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_9c36fcce5621d5f24af35fdc4c02f3a0d8ca7fd6.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_9c36fcce5621d5f24af35fdc4c02f3a0d8ca7fd6.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a196895547124399e3cb96e86ef55b1a2a194d80.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a196895547124399e3cb96e86ef55b1a2a194d80.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a263d2bac1a3506efb9402c0465f53331188db60.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a263d2bac1a3506efb9402c0465f53331188db60.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a30d90dba84e8f46f96d4cdb301caeb8c20137c8.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a30d90dba84e8f46f96d4cdb301caeb8c20137c8.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a40a2a262d70665f535772ed47811a3d30539eb7.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a40a2a262d70665f535772ed47811a3d30539eb7.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a410bf2fff03d820a4077b6c755aea8ad1b73ace.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a410bf2fff03d820a4077b6c755aea8ad1b73ace.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a51447edbee0dca00d72c15940c1d8397731969f.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a51447edbee0dca00d72c15940c1d8397731969f.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a67d28f1346c0ae2ed5665fda4f9aeba283081e9.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a67d28f1346c0ae2ed5665fda4f9aeba283081e9.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a6b994c52c109d2cbeb0edc11a088f292b9a9deb.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a6b994c52c109d2cbeb0edc11a088f292b9a9deb.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a7aeb685f4435039b89a3b67eb02ab806d9964d1.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a7aeb685f4435039b89a3b67eb02ab806d9964d1.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a7e3dc3f54099215f937cd03fd965854d86e6a9f.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_a7e3dc3f54099215f937cd03fd965854d86e6a9f.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_b21008446393ef4c944a4f6202eb9475a82f8685.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_b21008446393ef4c944a4f6202eb9475a82f8685.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_b332ef4573b9e800f3aa9627c454ea831cf920f4.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_b332ef4573b9e800f3aa9627c454ea831cf920f4.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_b72b0437e0e0f86bbb176157938a960d1a3f8b38.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_b72b0437e0e0f86bbb176157938a960d1a3f8b38.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_b88472525bf1b05044d1a07c27d695cb82adab53.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_b88472525bf1b05044d1a07c27d695cb82adab53.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_bbaabaaa09438b169a5cfaa4db8777b2a0af6142.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_bbaabaaa09438b169a5cfaa4db8777b2a0af6142.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_bcce0542d44b5eab94a4f5b81e3ee67e78acb80e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_bcce0542d44b5eab94a4f5b81e3ee67e78acb80e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_bd74af9518709e4e32fdd79416980347bda3882a.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_bd74af9518709e4e32fdd79416980347bda3882a.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_be0332f516897a8e4c41f5d2374840c880e38562.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_be0332f516897a8e4c41f5d2374840c880e38562.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c2bcca356e5c2f969e749f8788f24ae718cfbb44.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c2bcca356e5c2f969e749f8788f24ae718cfbb44.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c30b929c5d04fea7000f4e11f4ea21b2704e74cf.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c30b929c5d04fea7000f4e11f4ea21b2704e74cf.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c384492314da0c1b2f7aa7f544b3bbd4e51b67bf.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c384492314da0c1b2f7aa7f544b3bbd4e51b67bf.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c4dd95af8001d4e3efba0d54f61d513932a90312.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c4dd95af8001d4e3efba0d54f61d513932a90312.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c5b6d8ceff951fca9485b511ed5b91b10d9e90e1.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c5b6d8ceff951fca9485b511ed5b91b10d9e90e1.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c62d998cf88ad5f57431e5cf6f9acc08cb3f33fe.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c62d998cf88ad5f57431e5cf6f9acc08cb3f33fe.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c7fa4e90ac245872dae784bd604e290d86156434.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c7fa4e90ac245872dae784bd604e290d86156434.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c825ae1ba31ea65a645742e20616a1661cbbcc9b.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_c825ae1ba31ea65a645742e20616a1661cbbcc9b.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ca22ec9b503dea913cc0aa613e4f39bd14ec4c66.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ca22ec9b503dea913cc0aa613e4f39bd14ec4c66.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_cfe79edd24eea5d5153098ee232bc380472e8a04.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_cfe79edd24eea5d5153098ee232bc380472e8a04.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d0b03e6f9619f60c97734cfe742b2a2bfb5c46ae.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d0b03e6f9619f60c97734cfe742b2a2bfb5c46ae.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d1a0e7679c209f78cc76a9941cb993ad74fac3ec.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d1a0e7679c209f78cc76a9941cb993ad74fac3ec.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d2ac2a34721da1e2d348440462bf42e560131450.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d2ac2a34721da1e2d348440462bf42e560131450.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d3038c50b97460a1de160d3fcc0881435559d2f9.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d3038c50b97460a1de160d3fcc0881435559d2f9.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d421b5481f8912ef0069ea938883100182fdf8d6.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d421b5481f8912ef0069ea938883100182fdf8d6.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d68f83b005f7e938cb7a67f8d2ddbc55e99b346a.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d68f83b005f7e938cb7a67f8d2ddbc55e99b346a.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d6d783349ef47017378ebc751bb31c13d1d5d00d.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d6d783349ef47017378ebc751bb31c13d1d5d00d.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d93a7adc9339f8ec2e89745cf40e66725be06918.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d93a7adc9339f8ec2e89745cf40e66725be06918.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d9d9e9251b344242495ef6a13ee9f2ce86cafae2.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_d9d9e9251b344242495ef6a13ee9f2ce86cafae2.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_dc07afac4a493d2c16e93ecb41cdc73839920e76.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_dc07afac4a493d2c16e93ecb41cdc73839920e76.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_dd0eb85b990a2122ae942725fd9ef4d20d8b411c.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_dd0eb85b990a2122ae942725fd9ef4d20d8b411c.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_dd3f50ec9d520658c798bd7ab051e7d84cf04807.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_dd3f50ec9d520658c798bd7ab051e7d84cf04807.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e0277282591dbfdd87647c9dcfbb213073807042.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e0277282591dbfdd87647c9dcfbb213073807042.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e0bbe344f3e87cd3f5125c44fea078211dabee03.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e0bbe344f3e87cd3f5125c44fea078211dabee03.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e21e1b3703d936b00f1b7c8fb7e8d94c8cfa252b.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e21e1b3703d936b00f1b7c8fb7e8d94c8cfa252b.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e2c342317f308411bd3a7c9bcb012ebef89d0599.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e2c342317f308411bd3a7c9bcb012ebef89d0599.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e4757352467eda44127caed2025ec42da6a3e3aa.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e4757352467eda44127caed2025ec42da6a3e3aa.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e753c5c676c340d2906146df854e3c1b0b2b2f2c.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_e753c5c676c340d2906146df854e3c1b0b2b2f2c.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ec8c97b71ff0092c13ec1dad2a13c1b3927559f0.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ec8c97b71ff0092c13ec1dad2a13c1b3927559f0.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ed2849ed6eb1c6071545410a0697ae18adf9744b.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ed2849ed6eb1c6071545410a0697ae18adf9744b.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ed5af1cb1f304cac2b176934e115eb1de8520f43.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ed5af1cb1f304cac2b176934e115eb1de8520f43.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_eeb6d63f49c131c72a172a7f1e2820659c7d154e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_eeb6d63f49c131c72a172a7f1e2820659c7d154e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ef60b9a91b9cdb1cd6a448ba4b89b6f219845a58.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ef60b9a91b9cdb1cd6a448ba4b89b6f219845a58.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_efac7083adbcaac6db6d450ec8523cef42de16c0.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_efac7083adbcaac6db6d450ec8523cef42de16c0.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_efbfe49944d3095105f826395b54ed080d435f31.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_efbfe49944d3095105f826395b54ed080d435f31.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_f02b57116557997eb0a5426b78f3525a6da8816c.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_f02b57116557997eb0a5426b78f3525a6da8816c.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_f101a5f797906984a8cca8b94068f1e178145667.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_f101a5f797906984a8cca8b94068f1e178145667.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_f603e8cac048460cb7d800a8334f10ad0821f2b4.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_f603e8cac048460cb7d800a8334f10ad0821f2b4.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fa79d7249f58903e83a67245ed1e3d2a16253da5.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fa79d7249f58903e83a67245ed1e3d2a16253da5.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fa85f476d9b3e2b6ff18cd6ae845d6cb5dadf748.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fa85f476d9b3e2b6ff18cd6ae845d6cb5dadf748.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_faba27ee53fd10a5ebbf3529cc5f21b9f8e88eb6.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_faba27ee53fd10a5ebbf3529cc5f21b9f8e88eb6.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fad5c9c99d1ad47b7061eb7d18635a20b8e3d07d.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fad5c9c99d1ad47b7061eb7d18635a20b8e3d07d.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fb2f691fb3672b42e0481f06db643b6c23a7a857.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fb2f691fb3672b42e0481f06db643b6c23a7a857.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fd0fe872692cc7354e3b39a4b459e186f919f36e.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fd0fe872692cc7354e3b39a4b459e186f919f36e.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fd33cbfbc7ea96a2eaa36bfd32a3fdc41e4ec287.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fd33cbfbc7ea96a2eaa36bfd32a3fdc41e4ec287.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fd803c50b820352f5deed068ed1ae730e2040396.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fd803c50b820352f5deed068ed1ae730e2040396.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fe2d27af2ca2838e95347716620b6855017f02c5.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fe2d27af2ca2838e95347716620b6855017f02c5.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fe7272f8c992c141fdffa57314bf94d8049ed470.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_fe7272f8c992c141fdffa57314bf94d8049ed470.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ffbbbf5b55d4062205da88e2dbdad62a74e469f9.sess" afterPath="$PROJECT_DIR$/ocb1/sessions/werkzeug_ffbbbf5b55d4062205da88e2dbdad62a74e469f9.sess" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/22/227bb721df21de25fa6a123596eacad0bbb03129" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/22/227bb721df21de25fa6a123596eacad0bbb03129" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/2e/2e416e1e232d9eef0c8b08cabd7f32d2dd20e868" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/2e/2e416e1e232d9eef0c8b08cabd7f32d2dd20e868" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/6b/6b06165592e5438f41660b107ae552d1af2ca857" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/6b/6b06165592e5438f41660b107ae552d1af2ca857" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/78/78fb45666fb0e5ab8908015175d62fa555263258" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/78/78fb45666fb0e5ab8908015175d62fa555263258" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/8b/8b26ad1a619aade789b541f0634354e3818a3442" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/8b/8b26ad1a619aade789b541f0634354e3818a3442" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/22/227bb721df21de25fa6a123596eacad0bbb03129" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/22/227bb721df21de25fa6a123596eacad0bbb03129" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/2e/2e416e1e232d9eef0c8b08cabd7f32d2dd20e868" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/2e/2e416e1e232d9eef0c8b08cabd7f32d2dd20e868" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/6b/6b06165592e5438f41660b107ae552d1af2ca857" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/6b/6b06165592e5438f41660b107ae552d1af2ca857" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/78/78fb45666fb0e5ab8908015175d62fa555263258" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/78/78fb45666fb0e5ab8908015175d62fa555263258" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/8b/8b26ad1a619aade789b541f0634354e3818a3442" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/8b/8b26ad1a619aade789b541f0634354e3818a3442" />
+      <change beforePath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/94/94cce11c946a584a2b39967a6caae7b93a07e10e" afterPath="$PROJECT_DIR$/ocb12/filestore/weiwen5/checklist/94/94cce11c946a584a2b39967a6caae7b93a07e10e" />
+      <change beforePath="$PROJECT_DIR$/ocb12/sessions/werkzeug_a7aeb685f4435039b89a3b67eb02ab806d9964d1.sess" afterPath="$PROJECT_DIR$/ocb12/sessions/werkzeug_a7aeb685f4435039b89a3b67eb02ab806d9964d1.sess" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,112 +229,110 @@
     <favorites_list name="weiwen" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.40948275">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="controllers.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/controllers.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-636">
-                  <caret line="293" column="0" lean-forward="false" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#978#991#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/addons/website_sale/controllers/main.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4860">
-                  <caret line="280" column="64" lean-forward="false" selection-start-line="280" selection-start-column="22" selection-end-line="280" selection-end-column="64" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="product.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/addons/product/models/product.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-468">
-                  <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="product_attribute.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/addons/product/models/product_attribute.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="products.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/products.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="516">
-                  <caret line="856" column="10" lean-forward="false" selection-start-line="856" selection-start-column="10" selection-end-line="856" selection-end-column="10" />
-                  <folding>
-                    <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#1;n#p#0;n#div#0;n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="e#11899#11905#0" expanded="true" />
-                    <element signature="e#11905#11911#0" expanded="true" />
-                    <element signature="e#11918#11924#0" expanded="true" />
-                    <element signature="n#style#0;n#ul#0;n#div#1;n#div#3;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/js/header.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="91" column="21" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="21" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="products.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/products.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="109">
-                  <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="e#11899#11905#0" expanded="true" />
-                    <element signature="e#11905#11911#0" expanded="true" />
-                    <element signature="e#11918#11924#0" expanded="true" />
-                    <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/website_sale/controllers/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11736">
+              <caret line="662" column="52" lean-forward="false" selection-start-line="662" selection-start-column="12" selection-end-line="662" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/controllers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3348">
+              <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="diamondDetail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamondDetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6030">
+              <caret line="335" column="21" lean-forward="false" selection-start-line="335" selection-start-column="21" selection-end-line="335" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adds/addons_cn/auth_oauth_extended/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="59" column="34" lean-forward="false" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adds/widgets/odoo_web_login/controllers/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customized.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/customized.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14886">
+              <caret line="827" column="48" lean-forward="false" selection-start-line="827" selection-start-column="47" selection-end-line="827" selection-end-column="48" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#form#1;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/web/controllers/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7974">
+              <caret line="478" column="40" lean-forward="false" selection-start-line="478" selection-start-column="35" selection-end-line="478" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webclient_templates.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/web/views/webclient_templates.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4662">
+              <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ocb.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ocb.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="936">
+              <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__manifest__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/adds/widgets/website_form_recaptcha/__manifest__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -140,17 +346,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>website_salewebsite_sale.products</find>
-      <find>function goPage</find>
-      <find>loadStyleList</find>
-      <find>search_count</find>
-      <find>search</find>
-      <find>product</find>
-      <find>/pro</find>
-      <find>mobile</find>
-      <find>website_sale.products</find>
-      <find>goPage</find>
-      <find>function load(</find>
       <find>load</find>
       <find>page</find>
       <find>productList</find>
@@ -169,7 +364,18 @@
       <find>console</find>
       <find>console.log</find>
       <find>product.product</find>
+      <find>controller</find>
+      <find>diamondSearch.html</find>
+      <find>costomerLoginForm</find>
+      <find>/login</find>
+      <find>registerCustomized</find>
+      <find>toCustomizedlogin</find>
+      <find>/web</find>
+      <find>/web/login</find>
+      <find>login</find>
       <find>products</find>
+      <find>login_layout</find>
+      <find>web_window_title</find>
     </findStrings>
     <replaceStrings>
       <replace>$PROJECT_DIR$/</replace>
@@ -228,7 +434,6 @@
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/myaddress.html" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/changepassword.html" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/searchResult.html" />
-        <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamondDetail.html" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/css/publicmoblie.css" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/css/diyzuanlist.css" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/css/diy.css" />
@@ -245,16 +450,17 @@
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamond2.html" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/m1.html" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamond.html" />
-        <option value="$PROJECT_DIR$/ocb.conf" />
         <option value="$PROJECT_DIR$/addons/sale_timesheet/models/procurement.py" />
         <option value="$PROJECT_DIR$/addons/purchase/models/purchase.py" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamondSearch.html" />
         <option value="$PROJECT_DIR$/addons/product/models/product_attribute.py" />
         <option value="$PROJECT_DIR$/addons/website_sale/controllers/main.py" />
         <option value="$PROJECT_DIR$/addons/product/models/product.py" />
-        <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/controllers.py" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/js/header.js" />
         <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/products.html" />
+        <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamondDetail.html" />
+        <option value="$PROJECT_DIR$/adds/widgets/mobile_sample/controllers.py" />
+        <option value="$PROJECT_DIR$/ocb.conf" />
       </list>
     </option>
   </component>
@@ -265,10 +471,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1801" />
-    <option name="y" value="-4" />
-    <option name="width" value="1199" />
-    <option name="height" value="995" />
+    <option name="x" value="1936" />
+    <option name="y" value="111" />
+    <option name="width" value="1000" />
+    <option name="height" value="799" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -292,6 +498,29 @@
             <path>
               <item name="weiwen" type="b2602c69:ProjectViewProjectNode" />
               <item name="weiwen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weiwen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weiwen" type="462c0819:PsiDirectoryNode" />
+              <item name="adds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weiwen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weiwen" type="462c0819:PsiDirectoryNode" />
+              <item name="adds" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weiwen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weiwen" type="462c0819:PsiDirectoryNode" />
+              <item name="adds" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="website_form_recaptcha" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weiwen" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weiwen" type="462c0819:PsiDirectoryNode" />
+              <item name="setup" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -535,16 +764,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1665" y="-4" width="1615" height="1054" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08406524" sideWeight="0.49508598" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20326224" sideWeight="0.49508598" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30893433" sideWeight="0.35947302" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32676518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968633" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.64331895" sideWeight="0.64052695" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21443966" sideWeight="0.64052695" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21643664" sideWeight="0.504914" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -553,7 +782,8 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.4978328" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.4978328" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32676518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -598,90 +828,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/css/publicmoblie.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6090">
-          <caret line="406" column="0" lean-forward="false" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/css/diyzuanlist.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/css/diy.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/m2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="156" column="27" lean-forward="false" selection-start-line="156" selection-start-column="27" selection-end-line="156" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/picView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="419" column="66" lean-forward="true" selection-start-line="419" selection-start-column="66" selection-end-line="419" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31986">
-          <caret line="1777" column="6" lean-forward="false" selection-start-line="1710" selection-start-column="0" selection-end-line="1777" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7596">
-          <caret line="422" column="6" lean-forward="false" selection-start-line="355" selection-start-column="0" selection-end-line="422" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/customized.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16470">
-          <caret line="915" column="6" lean-forward="false" selection-start-line="915" selection-start-column="6" selection-end-line="915" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamond2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4338">
-          <caret line="241" column="19" lean-forward="false" selection-start-line="241" selection-start-column="17" selection-end-line="241" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/m1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9324">
-          <caret line="518" column="46" lean-forward="false" selection-start-line="518" selection-start-column="46" selection-end-line="518" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/product_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4518">
-          <caret line="251" column="44" lean-forward="false" selection-start-line="251" selection-start-column="44" selection-end-line="251" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3276">
-          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/article.html" />
     <entry file="file://$PROJECT_DIR$/addons/purchase/models/purchase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -724,24 +871,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/design.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="917">
-          <caret line="310" column="22" lean-forward="true" selection-start-line="310" selection-start-column="22" selection-end-line="310" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/design.html" />
     <entry file="file://$PROJECT_DIR$/adds/widgets/mobile/__openerp__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ocb.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -766,13 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile/views/database_selector.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" column="70" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addons/sale/views/sale_templates.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -780,13 +907,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamond.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamond.html" />
     <entry file="file://$PROJECT_DIR$/addons/sale/views/sales_team_views.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-234">
@@ -864,13 +985,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/single.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="121" column="22" lean-forward="false" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/single.html" />
     <entry file="file://$PROJECT_DIR$/addons/website_sale/static/description/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-789">
@@ -899,74 +1014,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/loadStyleList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="79" lean-forward="true" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/website_sale/controllers/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4860">
-          <caret line="280" column="64" lean-forward="false" selection-start-line="280" selection-start-column="22" selection-end-line="280" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/controllers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-636">
-          <caret line="293" column="0" lean-forward="false" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
-          <folding>
-            <element signature="e#978#991#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/js/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="91" column="21" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/loadStyleList.html" />
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/static/src/js/header.js" />
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/products.html" />
     <entry file="file://$PROJECT_DIR$/addons/product/models/product_attribute.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/product/models/product.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="252">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamondSearch.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+        <state relative-caret-position="342">
+          <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/product/models/product.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="72" column="91" lean-forward="false" selection-start-line="72" selection-start-column="91" selection-end-line="72" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/__openerp__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/template_jcmy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/school.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3024">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/templates.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/website_sale/controllers/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11736">
+          <caret line="662" column="52" lean-forward="false" selection-start-line="662" selection-start-column="12" selection-end-line="662" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/products.html">
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile/views/database_selector.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+        <state relative-caret-position="432">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/controllers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3348">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/customized.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14886">
+          <caret line="827" column="48" lean-forward="false" selection-start-line="827" selection-start-column="47" selection-end-line="827" selection-end-column="48" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11899#11905#0" expanded="true" />
-            <element signature="e#11905#11911#0" expanded="true" />
-            <element signature="e#11918#11924#0" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#form#1;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/web/views/webclient_templates.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4662">
+          <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/web/controllers/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7974">
+          <caret line="478" column="40" lean-forward="false" selection-start-line="478" selection-start-column="35" selection-end-line="478" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/odoo_web_login/controllers/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/addons_cn/auth_oauth_extended/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="59" column="34" lean-forward="false" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/mobile_sample/views/diamondDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6030">
+          <caret line="335" column="21" lean-forward="false" selection-start-line="335" selection-start-column="21" selection-end-line="335" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ocb.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adds/widgets/website_form_recaptcha/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
